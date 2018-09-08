@@ -1,0 +1,8 @@
+language: java
+
+before_install: cd api
+
+jdk: oraclejdk10
+
+after_success:
+  - javadoc -sourcepath "api/src/main/java"
