@@ -1,0 +1,17 @@
+package io.github.tclrainbow.Javablox.api.accountsettings.xbox;
+
+/**
+ * https://accountsettings.roblox.com/docs#/Xbox
+ */
+public interface IXbox {
+    /**
+     * Determines whether the username requested is valid.
+     * https://accountsettings.roblox.com/docs#!/Xbox/get_v1_xbox_is_username_valid
+     * @return {
+     *   "isValid": true,
+     *   "errorMessage": "string",
+     *   "errorCode": "UserNameValid"
+     * }
+     */
+    String isUsernameValid(String authorization, String signature, String username);
+}
