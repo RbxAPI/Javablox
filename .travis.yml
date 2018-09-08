@@ -1,8 +1,9 @@
 language: java
 
 before_install:
- - chmod +x gradlew
+ - export COMMITTER_EMAIL="$(git log -1 $TRAVIS_COMMIT --pretty="%cE")"
  - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
+ - chmod +x gradlew
 
 jdk: oraclejdk10
 
