@@ -1,4 +1,4 @@
-package chingdim.Javablox.api.accountsettings.privacysettings;
+package io.github.tclrainbow.Javablox.api.accountsettings.privacysettings;
 
 /**
  * https://accountsettings.roblox.com/docs#!/PrivacySettings

@@ -1,4 +1,4 @@
-package chingdim.Javablox.api.accountsettings.twostepverification;
+package io.github.tclrainbow.Javablox.api.accountsettings.twostepverification;
 
 /**
  * https://accountsettings.roblox.com/docs#/
