@@ -4,3 +4,11 @@ io.github.rbxapi.Javablox.api.accountsettings.privacysettings
 io.github.rbxapi.Javablox.api.accountsettings.tradesettings
 io.github.rbxapi.Javablox.api.accountsettings.twostepverification
 io.github.rbxapi.Javablox.api.accountsettings.xbox
+io.github.rbxapi.Javablox.api.assetdelievery.batch
+io.github.rbxapi.Javablox.api.auth.authentication
+io.github.rbxapi.Javablox.api.auth.credentials
+io.github.rbxapi.Javablox.api.auth.passwords
+io.github.rbxapi.Javablox.api.auth.saml
+io.github.rbxapi.Javablox.api.auth.signup
+io.github.rbxapi.Javablox.api.auth.twostepverification
+io.github.rbxapi.Javablox.api.auth.usernames
