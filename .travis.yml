@@ -1,6 +1,8 @@
 language: java
 
-before_install: cd api
+before_install:
+ - cd api
+ - chmod +x gradlew wrapper
 
 jdk: oraclejdk10
 
