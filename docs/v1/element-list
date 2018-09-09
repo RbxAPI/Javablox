@@ -12,3 +12,6 @@ io.github.rbxapi.Javablox.api.auth.saml
 io.github.rbxapi.Javablox.api.auth.signup
 io.github.rbxapi.Javablox.api.auth.twostepverification
 io.github.rbxapi.Javablox.api.auth.usernames
+io.github.rbxapi.Javablox.api.avatar.avatar
+io.github.rbxapi.Javablox.api.avatar.outfits
+io.github.rbxapi.Javablox.api.avatar.recentitem

@@ -87,4 +87,86 @@ public interface IAvatar {
      * }
      */
     String getAvatarRules();
+
+    /**
+     * Requests the authenticated user's thumbnail be redrawn
+     * https://avatar.roblox.com/docs#!/Avatar/post_v1_avatar_redraw_thumbnail
+     * @return {}
+     */
+    String redrawThumbnail();
+
+    /**
+     * Sets the authenticated user's body colors
+     * https://avatar.roblox.com/docs#!/Avatar/post_v1_avatar_set_body_colors
+     * @param bodyColorsModel {
+     *   "headColorId": 0,
+     *   "torsoColorId": 0,
+     *   "rightArmColorId": 0,
+     *   "leftArmColorId": 0,
+     *   "rightLegColorId": 0,
+     *   "leftLegColorId": 0
+     * }
+     * @return {
+     *   "success": true
+     * }
+     */
+    String setBodyColors(String bodyColorsModel);
+
+    /**
+     * Sets the authenticated user's player avatar type (e.g. R6 or R15)
+     * https://avatar.roblox.com/docs#!/Avatar/post_v1_avatar_set_player_avatar_type
+     * @param playerAvatarTypeModel {
+     *   "playerAvatarType": "R6"
+     * }
+     * @return {
+     *   "success": true
+     * }
+     */
+    String setAvatarType(String playerAvatarTypeModel);
+
+    /**
+     * Sets the authenticated user's scales
+     * https://avatar.roblox.com/docs#!/Avatar/post_v1_avatar_set_scales
+     * @param scalesModel {
+     *   "height": 0,
+     *   "width": 0,
+     *   "head": 0,
+     *   "depth": 0,
+     *   "proportion": 0,
+     *   "bodyType": 0
+     * }
+     * @return {
+     *   "success": true
+     * }
+     */
+    String setScales(String scalesModel);
+
+    /**
+     * Sets the avatar's current assets to the list
+     * Only allows items that you own, are not expired, and are wearable asset types. Any assets being worn before this method is called are automatically removed.
+     *
+     * https://avatar.roblox.com/docs#!/Avatar/post_v1_avatar_set_wearing_assets
+     * @param assetIdsModel {
+     *   "assetIds": [
+     *     0
+     *   ]
+     * }
+     * @return {
+     *   "invalidAssets": [
+     *     {
+     *       "id": 0,
+     *       "name": "string",
+     *       "assetType": {
+     *         "id": 0,
+     *         "name": "string"
+     *       }
+     *     }
+     *   ],
+     *   "invalidAssetIds": [
+     *     0
+     *   ],
+     *   "success": true
+     * }
+     */
+    String setWearingAssets(String assetIdsModel);
 }
