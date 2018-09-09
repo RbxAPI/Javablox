@@ -17,3 +17,10 @@ io.github.rbxapi.Javablox.api.avatar.outfits
 io.github.rbxapi.Javablox.api.avatar.recentitem
 io.github.rbxapi.Javablox.api.badges.badgeawards
 io.github.rbxapi.Javablox.api.badges.badges
+io.github.rbxapi.Javablox.api.billing.amazon
+io.github.rbxapi.Javablox.api.billing.apple
+io.github.rbxapi.Javablox.api.billing.gamecard
+io.github.rbxapi.Javablox.api.billing.google
+io.github.rbxapi.Javablox.api.billing.notification
+io.github.rbxapi.Javablox.api.billing.payments
+io.github.rbxapi.Javablox.api.billing.xsollapayments
