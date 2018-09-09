@@ -15,3 +15,5 @@ io.github.rbxapi.Javablox.api.auth.usernames
 io.github.rbxapi.Javablox.api.avatar.avatar
 io.github.rbxapi.Javablox.api.avatar.outfits
 io.github.rbxapi.Javablox.api.avatar.recentitem
+io.github.rbxapi.Javablox.api.badges.badgeawards
+io.github.rbxapi.Javablox.api.badges.badges
