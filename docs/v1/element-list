@@ -24,3 +24,6 @@ io.github.rbxapi.Javablox.api.billing.google
 io.github.rbxapi.Javablox.api.billing.notification
 io.github.rbxapi.Javablox.api.billing.payments
 io.github.rbxapi.Javablox.api.billing.xsollapayments
+io.github.rbxapi.Javablox.api.catalog.bundle
+io.github.rbxapi.Javablox.api.catalog.category
+io.github.rbxapi.Javablox.api.catalog.exclusiveitems
