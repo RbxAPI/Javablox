@@ -1,7 +1,19 @@
 package io.github.rbxapi.Javablox.api.chat.chat;
 
 /**
- * 
+ * https://chat.roblox.com/docs#!/Chat
  */
 public interface IChatSettings {
+
+    /**
+     * For every authenticated user, the clients hit this endpoint to get the chat related settings.
+     * https://chat.roblox.com/docs#!/Chat/get_v2_chat_settings
+     *
+     * @return {
+     *   "chatEnabled": true,
+     *   "hasSentChatMessageRecently": true
+     * }
+     */
+    String getChatSettings();
+
 }
