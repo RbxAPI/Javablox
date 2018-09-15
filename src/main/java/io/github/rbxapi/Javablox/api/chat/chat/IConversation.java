@@ -36,4 +36,7 @@ public interface IConversation {
      * ]
      */
     String getConversation(int[] conversationIds);
+
+
+
 }
