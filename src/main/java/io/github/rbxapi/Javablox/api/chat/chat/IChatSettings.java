@@ -16,4 +16,20 @@ public interface IChatSettings {
      */
     String getChatSettings();
 
+    /**
+     * Gets the rollout settings for requested feature
+     * https://chat.roblox.com/docs#!/Chat/get_v2_get_rollout_settings
+     *
+     * @param featureNames string array to request feature rollout settings
+     * @return {
+     *   "rolloutFeatures": [
+     *     {
+     *       "featureName": "LuaChat",
+     *       "isRolloutEnabled": true
+     *     }
+     *   ]
+     * }
+     */
+    String getRolloutSettings(String[] featureNames);
+
 }
