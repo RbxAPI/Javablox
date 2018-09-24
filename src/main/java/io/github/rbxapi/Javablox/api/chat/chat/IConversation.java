@@ -187,6 +187,68 @@ public interface IConversation {
      */
     String resetConversationUniverse(String requestModel);
 
+    /**
+     * Adds or updates universe associated with a conversation
+     * https://chat.roblox.com/docs#!/Chat/post_v2_set_conversation_universe
+     * 
+     * @param requestModel {
+     * "conversationId": 0,
+     * "universeId": 0
+     * }
+     * 
+     * @return {
+     * "statusMessage": "string"
+     * }
+     */
+    String setConversationUniverse(String requestModel);
 
-
+    /**
+     * Creates a new cloud edit conversation
+     * https://chat.roblox.com/docs#!/Chat/post_v2_start_cloud_edit_conversation
+     * 
+     * @param requestModel {
+     * "placeId": 0
+     * }
+     * 
+     * @return {
+     * "conversation": {
+     * "id": 0,
+     * "title": "string",
+     * "initiator": {
+     * "type": "User",
+     * "targetId": 0,
+     * "name": "string"
+     * },
+     *"hasUnreadMessages": true,
+     * "participants": [
+     * {
+     *   "type": "User",
+     *   "targetId": 0,
+     *   "name": "string"
+     * }
+     *],
+     * "conversationType": "OneToOneConversation",
+     *"conversationTitle": {
+     * "titleForViewer": "string",
+     * "isDefaultTitle": true
+     *},
+     *"lastUpdated": "2018-09-24T10:40:15.263Z",
+     *"conversationUniverse": {
+     * "universeId": 0,
+     * "rootPlaceId": 0
+     *}
+     *},
+     *"rejectedParticipants": [
+     *{
+     * "rejectedReason": "string",
+     * "type": "User",
+     * "targetId": 0,
+     * "name": "string"
+     *}
+     *],
+     *"resultType": "Success",
+     *"statusMessage": "string"
+     *}
+     */
+    String startCloudEditConversation(String requestModel);
 }
