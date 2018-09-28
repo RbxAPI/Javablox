@@ -251,4 +251,16 @@ public interface IConversation {
      *}
      */
     String startCloudEditConversation(String requestModel);
+
+    /**
+     * Creates a new group conversation
+     * https://chat.roblox.com/docs#!/Chat/post_v2_start_group_conversation
+     */
+    String startGroupConversation(String requestModel);
+
+    /**
+     * Updates the status for whether a user is typing currently
+     * https://chat.roblox.com/docs#!/Chat/post_v2_update_user_typing_status
+     */
+    String updateUserTypingStatus(String requestModel);
 }
