@@ -1,7 +1,0 @@
-public interface IGameTemplates {
-
-    /**
-    * https://develop.roblox.com/docs#!/GameTemplates/get_v1_gametemplates
-    */
-    String getGameTemplates();
-}
