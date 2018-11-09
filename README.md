@@ -1,5 +1,5 @@
 # Javablox
-**Note:** I use JDK 10 only
+**Note:** JDK has been updated to v11
 
 [This library is based on the following endpoint list](https://github.com/AntiBoomz/BTRoblox/blob/master/README.md#api-docs)
 
