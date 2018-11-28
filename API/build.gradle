@@ -6,11 +6,3 @@ group 'io.github.rbxapi'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.11
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    runtimeOnly project(':API')
-}

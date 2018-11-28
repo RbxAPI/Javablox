@@ -1,2 +1,2 @@
-rootProject.name = 'Javablox-api'
-
+rootProject.name = 'Javablox'
+include 'API'
