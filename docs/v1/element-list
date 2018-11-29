@@ -29,9 +29,13 @@ io.github.rbxapi.Javablox.api.catalog.category
 io.github.rbxapi.Javablox.api.catalog.exclusiveitems
 io.github.rbxapi.Javablox.api.chat.chat
 io.github.rbxapi.Javablox.api.chat.party
+io.github.rbxapi.Javablox.api.develop.alias
+io.github.rbxapi.Javablox.api.develop.developerproduct
 io.github.rbxapi.Javablox.api.develop.gametemplates
 io.github.rbxapi.Javablox.api.develop.gameupdatenotification
 io.github.rbxapi.Javablox.api.develop.group
 io.github.rbxapi.Javablox.api.develop.place
 io.github.rbxapi.Javablox.api.develop.statistic
+io.github.rbxapi.Javablox.api.develop.teamcreate
 io.github.rbxapi.Javablox.api.develop.universe
+io.github.rbxapi.Javablox.api.develop.user

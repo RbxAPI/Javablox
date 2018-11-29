@@ -255,12 +255,16 @@ public interface IConversation {
     /**
      * Creates a new group conversation
      * https://chat.roblox.com/docs#!/Chat/post_v2_start_group_conversation
+     * @param requestModel Model
+     * @return Status
      */
     String startGroupConversation(String requestModel);
 
     /**
      * Updates the status for whether a user is typing currently
      * https://chat.roblox.com/docs#!/Chat/post_v2_update_user_typing_status
+     * @param requestModel Model
+     * @return Status
      */
     String updateUserTypingStatus(String requestModel);
 }
