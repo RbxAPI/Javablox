@@ -11,6 +11,11 @@ repositories {
     mavenCentral()
 }
 
+wrapper {
+    gradleVersion = 5.0
+    distributionType = wrapper.DistributionType.BIN
+}
+
 dependencies {
     runtimeOnly project(':API')
 }
