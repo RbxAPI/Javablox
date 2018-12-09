@@ -11,9 +11,9 @@ repositories {
     mavenCentral()
 }
 
-wrapper {
+wrapper{
     gradleVersion = 5.0
-    distributionType = wrapper.DistributionType.BIN
+    distributionType = Wrapper.DistributionType.BIN
 }
 
 dependencies {
