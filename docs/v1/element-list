@@ -40,3 +40,7 @@ io.github.rbxapi.Javablox.api.develop.teamcreate
 io.github.rbxapi.Javablox.api.develop.universe
 io.github.rbxapi.Javablox.api.develop.user
 io.github.rbxapi.Javablox.api.following
+io.github.rbxapi.Javablox.api.friends.friends
+io.github.rbxapi.Javablox.api.friends.usercontacts
+io.github.rbxapi.Javablox.api.friends.userrecommendation
+io.github.rbxapi.Javablox.api.friends.verifiedfriends
