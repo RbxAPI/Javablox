@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.accountsettings.twostepverification;
+package io.github.rbxapi.javablox.api.accountsettings.twostepverification;
 
 /**
  * https://accountsettings.roblox.com/docs#/

@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.avatar.recentitem;
+package io.github.rbxapi.javablox.api.avatar.recentitem;
 
 /**
  * https://avatar.roblox.com/docs#/RecentItem

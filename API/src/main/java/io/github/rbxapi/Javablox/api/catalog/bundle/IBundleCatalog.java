@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.catalog.bundle;
+package io.github.rbxapi.javablox.api.catalog.bundle;
 
 /**
  * https://catalog.roblox.com/docs#/Bundle

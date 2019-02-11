@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.auth.credentials;
+package io.github.rbxapi.javablox.api.auth.credentials;
 
 /**
  * https://auth.roblox.com/docs#/Credentials

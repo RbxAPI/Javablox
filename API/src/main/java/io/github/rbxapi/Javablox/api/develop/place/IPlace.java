@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.develop.place;
+package io.github.rbxapi.javablox.api.develop.place;
 
 public interface IPlace {
 

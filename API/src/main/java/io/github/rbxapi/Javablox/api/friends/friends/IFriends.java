@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.friends.friends;
+package io.github.rbxapi.javablox.api.friends.friends;
 
 public interface IFriends {
     /**

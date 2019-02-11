@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.chat.chat;
+package io.github.rbxapi.javablox.api.chat.chat;
 
 public interface IConversation {
 

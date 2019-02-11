@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.billing.apple;
+package io.github.rbxapi.javablox.api.billing.apple;
 
 /**
  * https://billing.roblox.com/docs#/Apple

@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.friends.usercontacts;
+package io.github.rbxapi.javablox.api.friends.usercontacts;
 
 public interface IUserContact {
 

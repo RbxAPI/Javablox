@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.gameinternationalization;
+package io.github.rbxapi.javablox.api.gameinternationalization;
 
 public interface SourceLanguage {
 

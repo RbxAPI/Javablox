@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.billing.notification;
+package io.github.rbxapi.javablox.api.billing.notification;
 
 /**
  * https://billing.roblox.com/docs#/Notifications

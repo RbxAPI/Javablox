@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.develop.group;
+package io.github.rbxapi.javablox.api.develop.group;
 
 public interface IGroupUniverse {
 

@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.billing.gamecard;
+package io.github.rbxapi.javablox.api.billing.gamecard;
 
 /**
  * https://billing.roblox.com/docs#/Gamecard

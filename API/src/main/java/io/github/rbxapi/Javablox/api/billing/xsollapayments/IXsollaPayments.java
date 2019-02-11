@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.billing.xsollapayments;
+package io.github.rbxapi.javablox.api.billing.xsollapayments;
 
 /**
  * https://billing.roblox.com/docs#/XsollaPayments

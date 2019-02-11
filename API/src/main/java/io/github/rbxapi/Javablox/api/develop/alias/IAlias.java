@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.develop.alias;
+package io.github.rbxapi.javablox.api.develop.alias;
 
 public interface IAlias {
 

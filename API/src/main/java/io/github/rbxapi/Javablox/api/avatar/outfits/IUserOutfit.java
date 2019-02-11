@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.avatar.outfits;
+package io.github.rbxapi.javablox.api.avatar.outfits;
 
 public interface IUserOutfit {
 

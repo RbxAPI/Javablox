@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.develop.teamcreate;
+package io.github.rbxapi.javablox.api.develop.teamcreate;
 
 public interface ITeamCreate {
 

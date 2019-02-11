@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.auth.saml;
+package io.github.rbxapi.javablox.api.auth.saml;
 
 /**
  * https://auth.roblox.com/docs#!/Saml

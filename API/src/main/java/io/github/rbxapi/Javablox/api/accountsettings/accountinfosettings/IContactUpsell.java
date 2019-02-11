@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.accountsettings.accountinfosettings;
+package io.github.rbxapi.javablox.api.accountsettings.accountinfosettings;
 
 /**
  * https://accountsettings.roblox.com/docs#/AccountInfoSettings

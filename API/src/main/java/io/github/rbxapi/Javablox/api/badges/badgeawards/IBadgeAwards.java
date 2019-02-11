@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.badges.badgeawards;
+package io.github.rbxapi.javablox.api.badges.badgeawards;
 
 
 /**

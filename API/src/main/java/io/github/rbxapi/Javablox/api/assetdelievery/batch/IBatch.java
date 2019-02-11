@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.assetdelievery.batch;
+package io.github.rbxapi.javablox.api.assetdelievery.batch;
 
 /**
  * https://assetdelivery.roblox.com/docs#!/Batch

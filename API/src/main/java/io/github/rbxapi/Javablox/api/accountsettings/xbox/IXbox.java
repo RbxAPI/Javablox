@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.accountsettings.xbox;
+package io.github.rbxapi.javablox.api.accountsettings.xbox;
 
 /**
  * https://accountsettings.roblox.com/docs#/Xbox

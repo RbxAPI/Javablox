@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.develop.developerproduct;
+package io.github.rbxapi.javablox.api.develop.developerproduct;
 
 public interface IDeveloperProduct {
 

@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.billing.amazon;
+package io.github.rbxapi.javablox.api.billing.amazon;
 
 /**
  * https://billing.roblox.com/docs#!/Amazon

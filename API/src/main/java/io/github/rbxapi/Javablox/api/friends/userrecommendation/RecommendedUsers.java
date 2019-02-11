@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.friends.userrecommendation;
+package io.github.rbxapi.javablox.api.friends.userrecommendation;
 
 public interface RecommendedUsers {
 

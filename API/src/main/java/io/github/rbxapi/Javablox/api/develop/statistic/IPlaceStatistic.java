@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.develop.statistic;
+package io.github.rbxapi.javablox.api.develop.statistic;
 
 public interface IPlaceStatistic {
 

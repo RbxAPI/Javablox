@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.badges.badges;
+package io.github.rbxapi.javablox.api.badges.badges;
 
 public interface IUserBadges {
 

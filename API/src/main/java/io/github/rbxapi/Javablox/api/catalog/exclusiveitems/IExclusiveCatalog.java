@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.catalog.exclusiveitems;
+package io.github.rbxapi.javablox.api.catalog.exclusiveitems;
 
 /**
  * https://catalog.roblox.com/docs#/ExclusiveItems

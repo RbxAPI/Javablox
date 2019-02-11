@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.accountsettings.email;
+package io.github.rbxapi.javablox.api.accountsettings.email;
 
 /**
  * https://accountsettings.roblox.com/docs#!/Email

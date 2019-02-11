@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.develop.user;
+package io.github.rbxapi.javablox.api.develop.user;
 
 public interface IGroupManage {
 

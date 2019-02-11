@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.billing.google;
+package io.github.rbxapi.javablox.api.billing.google;
 
 /**
  * https://billing.roblox.com/docs#/Google

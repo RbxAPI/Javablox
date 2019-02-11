@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.auth.usernames;
+package io.github.rbxapi.javablox.api.auth.usernames;
 
 /**
  * https://auth.roblox.com/docs#/Usernames

@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.billing.payments;
+package io.github.rbxapi.javablox.api.billing.payments;
 
 /**
  * https://billing.roblox.com/docs#/Payments

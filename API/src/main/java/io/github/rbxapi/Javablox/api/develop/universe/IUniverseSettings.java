@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.develop.universe;
+package io.github.rbxapi.javablox.api.develop.universe;
 
 public interface IUniverseSettings {
 

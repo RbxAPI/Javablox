@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.accountsettings.tradesettings;
+package io.github.rbxapi.javablox.api.accountsettings.tradesettings;
 
 /**
  * https://accountsettings.roblox.com/docs#/TradeSettings

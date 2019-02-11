@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.following;
+package io.github.rbxapi.javablox.api.following;
 
 public interface IUserFollowing {
 

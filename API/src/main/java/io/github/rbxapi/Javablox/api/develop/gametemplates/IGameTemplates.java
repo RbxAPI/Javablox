@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.develop.gametemplates;
+package io.github.rbxapi.javablox.api.develop.gametemplates;
 
 public interface IGameTemplates {
 

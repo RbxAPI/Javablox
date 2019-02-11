@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.chat.party;
+package io.github.rbxapi.javablox.api.chat.party;
 
 public interface IParty {
 

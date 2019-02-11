@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.auth.signup;
+package io.github.rbxapi.javablox.api.auth.signup;
 
 /**
  * https://auth.roblox.com/docs#/Signup

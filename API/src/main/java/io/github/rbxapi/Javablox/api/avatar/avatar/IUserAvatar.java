@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.avatar.avatar;
+package io.github.rbxapi.javablox.api.avatar.avatar;
 
 public interface IUserAvatar {
 

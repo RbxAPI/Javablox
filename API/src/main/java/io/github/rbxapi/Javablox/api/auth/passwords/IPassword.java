@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.auth.passwords;
+package io.github.rbxapi.javablox.api.auth.passwords;
 
 /**
  * https://auth.roblox.com/docs#/Passwords

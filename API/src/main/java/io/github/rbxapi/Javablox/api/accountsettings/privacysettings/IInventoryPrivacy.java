@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.accountsettings.privacysettings;
+package io.github.rbxapi.javablox.api.accountsettings.privacysettings;
 
 /**
  * https://accountsettings.roblox.com/docs#!/PrivacySettings

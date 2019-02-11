@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.catalog.category;
+package io.github.rbxapi.javablox.api.catalog.category;
 
 /**
  * https://catalog.roblox.com/docs#/Category

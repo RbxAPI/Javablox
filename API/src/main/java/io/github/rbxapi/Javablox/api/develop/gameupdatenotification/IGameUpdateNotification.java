@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.develop.gameupdatenotification;
+package io.github.rbxapi.javablox.api.develop.gameupdatenotification;
 
 public interface IGameUpdateNotification {
 

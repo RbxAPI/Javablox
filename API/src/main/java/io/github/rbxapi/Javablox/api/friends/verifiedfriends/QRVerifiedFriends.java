@@ -1,4 +1,4 @@
-package io.github.rbxapi.Javablox.api.friends.verifiedfriends;
+package io.github.rbxapi.javablox.api.friends.verifiedfriends;
 
 public interface QRVerifiedFriends {
 
