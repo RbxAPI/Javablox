@@ -1,5 +1,6 @@
 language: java
 install: true
+dist: xenial
 
 script:
  - ./gradlew build --scan -s
@@ -15,7 +16,6 @@ cache:
 
 before_install:
  - chmod +x gradlew
- - ./gradlew wrapper
 
 jdk: oraclejdk11
 
