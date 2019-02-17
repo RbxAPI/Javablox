@@ -61,20 +61,12 @@ public class EndpointHandler implements EndpointHandling {
 
     @Override
     String get(String filledUrl) {
-        return static_get(filledUrl);
-    }
-
-    private static String static_get(String filledUrl) {
         SomeHTTPResponse response = some_client.read(filledUrl);
         return response.toString();
     }
 
     @Override
     String post(String filledUrl) {
-        return static_post(filledUrl);
-    }
-
-    private static String static_post(String filledUrl) {
         SomeHTTPResponse response = some_client.send(filledUrl);
         return response.toString();
     }
@@ -91,32 +83,28 @@ Javablox ships with a default implementation that uses `java.net.http` HTTP Clie
 public class UserEndpoint implements UserService {
     @Override
     String getUsername(double userId) {
-        return static_getUsername(userId); // return "Pythonic-Rainbow"
+        return EndpointHandler.get(MessageFormat.format("https://user.roblox.com/getuser?userid={0}", userid)); // return "Pythonic-Rainbow"
     }
 
-    private static String static_getUsername(double userId) {
-        return EndpointHandler.get(MessageFormat.format("https://user.roblox.com/getuser?userid={0}", userid));
-    }
-
+    // It is common for POST methods to return updated value (if available) when the request is success.
+    // If the request failed, you can return the original value or simply an empty string.
     @Override
     String setUsername(String username, double userId) {
-        return static_setUsername(String username, double userId);
-    }
-
-    private static String static_setUsername(String username, double userId) {
-        return EndpointHandler.post(MessageFormat.format("https:/user.roblox.com/setusername?userid={0}&username={1}", userId, username));
+        String response = EndpointHandler.post(MessageFormat.format("https:/user.roblox.com/setusername?userid={0}&username={1}", userId, username));
+        if (response == "{}") return getUsername(userId);
+        return username;
     }
 }
 ```
 
 ## 4. Optional Level: Extension Layer
-While Javablox only requires the above layers to work, it only provides fundamental endpoint interactions. For the highest level layer, this provides some optional features.
+While Javablox only requires the above layers to work, it only provides fundamental endpoint interactions. As the highest level layer, this provides some optional features.
 * This layer should **NOT** be customized in any way.
 
 Here is some extensions that ships by default with Javablox:
 
 ### Entity-oriented
-Unlike other layers, this layer focuses on entity rather than 
+Unlike other layers, this layer focuses on entity rather than  endpoint
 
 For example, `Data Type Layer` has a code tree similar to this
 * Endpoints
@@ -143,7 +131,7 @@ public class User {
 
     public User(int userId) {
         this.userId = userId;
-        this.username = UserEndPoint.getUsername(userId);
+        this.username = UserEndpoint.getUsername(userId);
     }
 }
 ```

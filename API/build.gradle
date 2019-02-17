@@ -7,7 +7,4 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.11
 
-wrapper{
-    gradleVersion = '5.2.1'
-    distributionType = Wrapper.DistributionType.BIN
-}
+// Don't add wrapper because it is included in Javablox
