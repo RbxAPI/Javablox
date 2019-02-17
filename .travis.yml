@@ -15,6 +15,7 @@ cache:
   - $HOME/.gradle/wrapper/
 
 before_install:
+ - ./gradlew wrapper
  - chmod +x gradlew
 
 jdk: oraclejdk11

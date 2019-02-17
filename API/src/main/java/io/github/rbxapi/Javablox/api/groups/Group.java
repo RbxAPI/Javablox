@@ -52,7 +52,7 @@ public interface Group {
 
     /**
      * https://groups.roblox.com/docs#!/Groups/post_v1_groups_create
-     * @apiNote This endpoint will charge Robux for the group purchase.
+     * <b>NOTE: This endpoint will charge Robux for the group purchase. </b>
      * @param name Group name
      * @param description Group description
      * @param publicGroup Is the group public
