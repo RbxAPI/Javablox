@@ -50,3 +50,4 @@ io.github.rbxapi.javablox.api.games
 io.github.rbxapi.javablox.api.groups
 io.github.rbxapi.javablox.api.inventory
 io.github.rbxapi.javablox.api.locale
+io.github.rbxapi.javablox.api.notification
