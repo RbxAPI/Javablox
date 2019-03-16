@@ -36,3 +36,7 @@ io.github.rbxapi.javablox.api.inventory
 io.github.rbxapi.javablox.api.locale
 io.github.rbxapi.javablox.api.metrics
 io.github.rbxapi.javablox.api.notification
+io.github.rbxapi.javablox.api.points
+io.github.rbxapi.javablox.api.premiumfeatures
+io.github.rbxapi.javablox.api.presence
+io.github.rbxapi.javablox.api.publish
