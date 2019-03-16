@@ -1,4 +1,4 @@
-io.github.rbxapi.javablox.api
+module:io.github.rbxapi.javablox.api
 io.github.rbxapi.javablox.api.accountsettings.accountinfosettings
 io.github.rbxapi.javablox.api.accountsettings.email
 io.github.rbxapi.javablox.api.accountsettings.privacysettings
@@ -40,3 +40,5 @@ io.github.rbxapi.javablox.api.points
 io.github.rbxapi.javablox.api.premiumfeatures
 io.github.rbxapi.javablox.api.presence
 io.github.rbxapi.javablox.api.publish
+io.github.rbxapi.javablox.api.thumbnails
+io.github.rbxapi.javablox.api.translationroles

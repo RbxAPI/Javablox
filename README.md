@@ -33,16 +33,6 @@ String getUsername(double userId);
 String setUsername(String username, double userId);
 }
 ```
-Additionally, Javablox has an endpoint handling API that let programmers to write their HTTP Client in a preferred way. **This is not required**, and you can write your own client without it.
-```java
-// Example Endpoint Handling API
-// Defines what a HTTP Client should do
-// filledUrl means a URL with parameters filled in , e.g. https://user.roblox.com/getuser?userid=10
-public interface EndpointHandling {
-    String get(String filledUrl); 
-    String post(String filledUrl);
-}
-```
 
 ## 2. Control Level: Client Layer
 This layer implements the Endpoint API in the previous layer.
