@@ -1,5 +1,7 @@
 plugins {
-    id 'java'
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
 }
 
 group 'io.github.rbxapi'
@@ -11,11 +13,76 @@ repositories {
     mavenCentral()
 }
 
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
 wrapper{
     gradleVersion = '5.2.1'
     distributionType = Wrapper.DistributionType.BIN
 }
 
 dependencies {
-    runtimeOnly project(':API')
+    implementation project(':javablox-api')
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'javablox'
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            pom {
+                name = 'Javablox'
+                description = 'Complete artifact for Javablox'
+                url = 'https://github.com/rbxapi/javablox'
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://github.com/RbxAPI/Javablox/blob/master/LICENSE.md'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'ChingDim'
+                        name = 'ChingDim'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/RbxAPI/Javablox.git'
+                    developerConnection = 'scm:git:ssh://github.com/RbxAPI/Javablox.git'
+                    url = 'http://github.com/RbxAPI/Javablox/'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username "$mavenUser"
+                password "$mavenPassword"
+            }
+            def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+            def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
+
+javadoc {
+    if (JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
 }
