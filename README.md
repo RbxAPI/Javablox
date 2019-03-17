@@ -34,8 +34,8 @@ String setUsername(String username, double userId);
 }
 ```
 
-## 2. Control Level: Client Layer
-This layer implements the Endpoint API in the previous layer.
+## 2. Implementation Level: Endpoint Layer
+This layer implements APIs in the previous layer.
 
 Because endpoints will not change, it is recommended to code in `static`.
 * Programmers can write their own client code, and then use the roblox endpoints with it
@@ -46,7 +46,7 @@ Because endpoints will not change, it is recommended to code in `static`.
 // Example Endpoint Handler
 // Defines how a HTTP Client works
 // If you wish the client to run in async, you should change codes in this layer.
-public class EndpointHandler implements EndpointHandling {
+public class ClientHandler {
     private SomeHTTPClient client = new SomeHTTPClient();
 
     @Override
@@ -62,18 +62,46 @@ public class EndpointHandler implements EndpointHandling {
     }
 }
 ```
+After the client is defined, we will implement the API.
+```java
+// Example Javablox API implementation
+public class UserEndpoint implements User {
+    @Override
+    String getUsername(double userId) {
+        return ClientHandler.get(MessageFormat.format("https://user.roblox.com/getuser?userid={0}", userid)); // return "Pythonic-Rainbow"
+    }
 
-## 3. Implementation Level: Data Type Layer
-This layer consist of codes that are ~~actually meaningful~~ high level enough for programmers wish to interact with the Roblox endpoint at ease. It works by implementing the HTTP Layer, then with a chosen HTTP client, convert `String` to different data type. The convertion method will vary.
+    // It is common for POST methods to return updated value (if available) when the request is success.
+    // If the request failed, you can return the original value or simply an empty string.
+    @Override
+    String setUsername(String username, double userId) {
+        String response = ClientHandler.post(MessageFormat.format("https:/user.roblox.com/setusername?userid={0}&username={1}", userId, username));
+        if (response == "{}") return getUsername(userId);
+        return username;
+    }
+}
+```
+
+## 3. Control Level: Data Type Layer
+This layer consist of codes that are ~~actually meaningful~~ high level enough for programmers wish to interact with the Roblox endpoint at ease. It works by implementing the Endpoint Layer, then with a chosen HTTP client, convert `String` to different data type. The convertion method will vary.
+
+The main difference between this layer and the Endpoint Layer is that we will parse HTTP responses(JSON) here, as well as throwing exceptions.
 
 Javablox ships with a default implementation that uses `java.net.http` HTTP Client [(Built in with Java 11)](https://openjdk.java.net/groups/net/httpclient/intro.html) and [`org.json`](https://stleary.github.io/JSON-java/) convertion library.
 
 ```java
 // Example Javablox API implementation
-public class UserEndpoint implements UserService {
-    @Override
-    String getUsername(double userId) {
-        return EndpointHandler.get(MessageFormat.format("https://user.roblox.com/getuser?userid={0}", userid)); // return "Pythonic-Rainbow"
+public class UserService {
+    private static UserEndpoint user = new UserEndpoint();
+
+    String getUsername(double userId) throws JavabloxExceptionA, JavabloxExceptionB {
+        JSON j = JSON.parse(user.getUsername(userId));
+        if j.has("error") {
+            //throw multiple exceptions
+            return "";
+        } else {
+            return j.getString("name") // return "Pythonic-Rainbow"
+        } 
     }
 
     // It is common for POST methods to return updated value (if available) when the request is success.

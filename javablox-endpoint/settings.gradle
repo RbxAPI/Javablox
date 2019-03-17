@@ -1,0 +1,3 @@
+rootProject.name = 'javablox-endpoint'
+include 'javablox-api'
+project(':javablox-api').projectDir = new File(settingsDir, "../javablox-api"); 

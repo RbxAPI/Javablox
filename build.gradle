@@ -23,13 +23,20 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     from javadoc.destinationDir
 }
 
+subprojects {
+    wrapper{
+        gradleVersion = '5.2.1'
+        distributionType = Wrapper.DistributionType.BIN
+    }
+}
+
 wrapper{
     gradleVersion = '5.2.1'
     distributionType = Wrapper.DistributionType.BIN
 }
 
 dependencies {
-    implementation project(':javablox-api')
+    implementation project(':javablox-endpoint')
 }
 
 publishing {

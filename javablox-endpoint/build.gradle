@@ -1,11 +1,8 @@
 plugins {
     id 'java-library'
-    id 'org.gradle.java.experimental-jigsaw' version "0.1.1"
     id 'maven-publish'
     id 'signing'
 }
-
-javaModule.name = 'io.github.rbxapi.javablox.api'
 
 group 'io.github.rbxapi'
 version '1.0-SNAPSHOT'
@@ -22,17 +19,21 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     from javadoc.destinationDir
 }
 
+dependencies {
+    implementation project(':javablox-api')
+}
+
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'javablox-api'
+            artifactId = 'javablox-endpoint'
             from components.java
             artifact sourcesJar
             artifact javadocJar
             pom {
-                name = 'Javablox API'
-                description = 'API interfaces for Javablox'
+                name = 'Javablox Endpoint'
+                description = 'Implementation of raw IO for Javablox'
                 url = 'https://github.com/rbxapi/javablox'
                 licenses {
                     license {
@@ -77,5 +78,7 @@ javadoc {
         options.addBooleanOption('html5', true)
     }
 }
+
+
 
 // Don't add wrapper because it is included in Javablox
