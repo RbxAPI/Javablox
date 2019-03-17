@@ -17,6 +17,7 @@ cache:
 
 before_install:
  - chmod +x gradlew
+ - sudo gem install travis
  - gpg --export-secret-key ${GPG_KEY_ID} > travis.gpg
  - travis encrypt-file travis.jpg
  - shred --remove travis.gpg
