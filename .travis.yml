@@ -7,7 +7,7 @@ script:
  - gpg --export-secret-key ${GPG_KEY_ID} > travis.gpg
  - travis encrypt-file travis.jpg
  - shred --remove travis.gpg
- - ./gradlew publish -PmavenUsername=${mavenUsername} -PmavenPassword=${mavenPassword} -Psigning.keyId=${GPG_KEY_ID} Psigning.password=${GPG_KEY_PASSPHRASE} -Psigning.secretKeyRingFile=travis.gpg
+ - ./gradlew publish -PmavenUser=${mavenUser} -PmavenPassword=${mavenPassword} -Psigning.keyId=${GPG_KEY_ID} Psigning.password=${GPG_KEY_PASSPHRASE} -Psigning.secretKeyRingFile=travis.gpg
 
 before_cache:
  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
