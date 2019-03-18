@@ -21,7 +21,7 @@ before_install:
  - sudo apt install ruby libffi-dev gcc make
  - sudo gem install travis
  - gpg --export-secret-key ${GPG_KEY_ID} > travis.gpg
- - travis encrypt-file travis.jpg
+ - travis encrypt-file travis.gpg
  - shred --remove travis.gpg
  - ./gradlew wrapper
 
