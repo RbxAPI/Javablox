@@ -17,7 +17,8 @@ cache:
 
 before_install:
  - chmod +x gradlew
- - sudo apt install ruby ruby-dev libffi-dev gcc make
+ - sudo apt-get install ruby-dev
+ - sudo apt install ruby libffi-dev gcc make
  - sudo gem install travis
  - gpg --export-secret-key ${GPG_KEY_ID} > travis.gpg
  - travis encrypt-file travis.jpg
