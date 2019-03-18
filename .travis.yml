@@ -12,8 +12,6 @@ cache:
   - "$HOME/.gradle/caches/"
   - "$HOME/.gradle/wrapper/"
 before_install:
-- openssl aes-256-cbc -K $encrypted_1a499bc70cbf_key -iv $encrypted_1a499bc70cbf_iv
-  -in travis.gpg.enc -out travis.gpg -d
 - chmod +x gradlew
 - chmod +x deploy.sh
 - "./gradlew wrapper -PmavenUser=${mavenUser} -PmavenPassword=${mavenPassword} -Psigning.keyId=${GPG_KEY_ID}
