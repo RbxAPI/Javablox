@@ -2,7 +2,8 @@ language: java
 install: true
 dist: xenial
 script:
-- ./gradlew build --scan -s -PmavenUser=${mavenUser} -PmavenPassword=${mavenPassword} -Psigning.keyId=${GPG_KEY_ID} -Psigning.password=${GPG_KEY_PASSPHRASE} -Psigning.secretKeyRingFile=travis.gpg
+- "./gradlew build --scan -s -PmavenUser=${mavenUser} -PmavenPassword=${mavenPassword}
+  -Psigning.keyId=${GPG_KEY_ID} -Psigning.password=${GPG_KEY_PASSPHRASE} -Psigning.secretKeyRingFile=travis.gpg"
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -11,21 +12,24 @@ cache:
   - "$HOME/.gradle/caches/"
   - "$HOME/.gradle/wrapper/"
 before_install:
+- openssl aes-256-cbc -K $encrypted_1a499bc70cbf_key -iv $encrypted_1a499bc70cbf_iv
+  -in travis.gpg.enc -out travis.gpg -d
 - chmod +x gradlew
 - chmod +x deploy.sh
-- ./gradlew wrapper -PmavenUser=${mavenUser} -PmavenPassword=${mavenPassword} -Psigning.keyId=${GPG_KEY_ID} -Psigning.password=${GPG_KEY_PASSPHRASE} -Psigning.secretKeyRingFile=travis.gpg
+- "./gradlew wrapper -PmavenUser=${mavenUser} -PmavenPassword=${mavenPassword} -Psigning.keyId=${GPG_KEY_ID}
+  -Psigning.password=${GPG_KEY_PASSPHRASE} -Psigning.secretKeyRingFile=travis.gpg"
 jdk: oraclejdk11
 after_success:
-- ./deploy.sh
+- "./deploy.sh"
 - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
 - chmod +x send.sh
-- ./send.sh success $TCLRainbow
-- ./send.sh success $Sanjay
+- "./send.sh success $TCLRainbow"
+- "./send.sh success $Sanjay"
 after_failure:
 - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
 - chmod +x send.sh
-- ./send.sh failure $TCLRainbow
-- ./send.sh failure $Sanjay
+- "./send.sh failure $TCLRainbow"
+- "./send.sh failure $Sanjay"
 env:
   global:
   - secure: r3eZ27uynhh6wfqXZjsmkK3P0JJdT72xwelkTAAgoFWv1tXdgyV+WRLHxBa9jlMNdXNeF+uW0CIIYZRD8nElQAjpUmYKeQZIyGiIch3bWAhNQmnr/HuUs/NEvOg/aCh43enctxs4aezkdHpv1SOOZW45mcdEs8VP5P/d+NODM7UnmMAuXA1I2PDtsMyFKsh4dJZIeHxFpB0yJiqKBzAItlXzoUHbWx9FJiWLfMeKUhGzLj4KHRYJUVIdvaemj0QQv/uKe/wYfm+zzmfB8STlqZJhXDgQ9WQhKqWhJrs6ge0ZFkPKaOAK4Jm8+ayi2jw6cTeHq/xJ3hOhcZM+cfJ4DsjLsnKWsY9AJn+iQrZXo1odUq0NrK1Ao03zihlmN/FnU19/hdNjnSBnIuPJtFxhB7SIO84sXIYJif8VO/a2N2PBI2O2PIXwrH+nUVXPT9A2ARW5bDIKjSYDFyrHhK1EBTLUCZlRVXSt/f3lQ5GBV/SDCD1E7uWAeURbEpsAeTh/vFMdf79MWFALFUF9RWTU0PKTKfWkpkq7hQ+tEAdROgFrZlyKfDqPuUet+4ALI85WxvzYT22f8fMJp7aBMRofW1qXLMzwFNL8yf7zEPZn9FPx0qLP6/0KkXESGJDak7Zup9HDP9fI0MIuZWIJZ5CGtVknh5Te2/zYrp83yIVpLjg=
