@@ -3,7 +3,6 @@ install: true
 dist: xenial
 script:
 - ./gradlew build --scan -s -PmavenUser=${mavenUser} -PmavenPassword=${mavenPassword} -Psigning.keyId=${GPG_KEY_ID} -Psigning.password=${GPG_KEY_PASSPHRASE} -Psigning.secretKeyRingFile=travis.gpg
-- ./gradlew publish -PmavenUser=${mavenUser} -PmavenPassword=${mavenPassword} -Psigning.keyId=${GPG_KEY_ID} -Psigning.password=${GPG_KEY_PASSPHRASE} -Psigning.secretKeyRingFile=travis.gpg
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -16,6 +15,7 @@ before_install:
 - ./gradlew wrapper -PmavenUser=${mavenUser} -PmavenPassword=${mavenPassword} -Psigning.keyId=${GPG_KEY_ID} -Psigning.password=${GPG_KEY_PASSPHRASE} -Psigning.secretKeyRingFile=travis.gpg
 jdk: oraclejdk11
 after_success:
+- ./deploy.sh
 - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
 - chmod +x send.sh
 - "./send.sh success $TCLRAINBOW"
