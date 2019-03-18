@@ -39,6 +39,10 @@ dependencies {
     implementation project(':javablox-endpoint')
 }
 
+ext.moduleName = 'io.github.rbxapi.javablox'
+
+
+
 publishing {
     publications {
         mavenJava(MavenPublication) {

@@ -1,16 +1,16 @@
 plugins {
     id 'java-library'
-    id 'org.gradle.java.experimental-jigsaw' version "0.1.1"
     id 'maven-publish'
     id 'signing'
 }
 
-javaModule.name = 'io.github.rbxapi.javablox.api'
 
 group 'io.github.rbxapi'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.11
+
+ext.moduleName = 'io.github.rbxapi.javablox.api'
 
 task sourcesJar(type: Jar, dependsOn: classes) {
     classifier = 'sources'

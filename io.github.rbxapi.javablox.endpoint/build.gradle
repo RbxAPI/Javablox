@@ -9,6 +9,8 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.11
 
+ext.moduleName = 'io.github.rbxapi.javablox.endpoint'
+
 task sourcesJar(type: Jar, dependsOn: classes) {
     classifier = 'sources'
     from sourceSets.main.allSource
@@ -21,6 +23,54 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 
 dependencies {
     implementation project(':javablox-api')
+}
+
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'io.github.rbxapi.javablox.api'
+        ]
+        classpath = files()
+    }
+}
+
+compileTestJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'io.github.rbxapi.javablox.api',
+                '--add-modules', 'org.junit.jupiter.api',
+                '--add-reads', "$moduleName=org.junit.jupiter.api",
+                '--patch-module', "$moduleName=" + files(sourceSets.test.java.srcDirs).asPath,
+        ]
+        classpath = files()
+    }
+}
+
+javadoc {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        exclude "**/module-info.java"
+        options.addStringOption('-module-path', classpath.asPath)
+        options.addStringOption('-add-modules', 'io.github.rbxapi.javablox.api')
+        options.addStringOption('-class-path', "")
+        options.addBooleanOption('html5', true)
+        options.addBooleanOption('verbose', true)
+    }
+}
+
+test {
+    useJUnitPlatform()
+
+    doFirst {
+        jvmArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'io.github.rbxapi.javablox.api'
+        ]
+    }
 }
 
 
