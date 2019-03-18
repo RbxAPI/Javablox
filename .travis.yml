@@ -12,6 +12,7 @@ cache:
   - "$HOME/.gradle/wrapper/"
 before_install:
 - chmod +x gradlew
+- chmod +x deploy.sh
 - ./gradlew wrapper -PmavenUser=${mavenUser} -PmavenPassword=${mavenPassword} -Psigning.keyId=${GPG_KEY_ID} -Psigning.password=${GPG_KEY_PASSPHRASE} -Psigning.secretKeyRingFile=travis.gpg
 jdk: oraclejdk11
 after_success:
