@@ -35,8 +35,15 @@ wrapper{
     distributionType = Wrapper.DistributionType.BIN
 }
 
+repositories {
+    maven {
+        url 'https://oss.sonatype.org/content/groups/public'
+    }
+}
+
 dependencies {
-    implementation project(':javablox-endpoint')
+    implementation 'io.github.rbxapi:javablox-endpoint:1.0-SNAPSHOT'
+    testImplementation project(':javablox-endpoint')
 }
 
 ext.moduleName = 'io.github.rbxapi.javablox'

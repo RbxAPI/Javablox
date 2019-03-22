@@ -22,7 +22,14 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 }
 
 dependencies {
-    implementation project(':javablox-api')
+    implementation 'io.github.rbxapi:javablox-api:1.0-SNAPSHOT'
+    testImplementation project(':javablox-api')
+}
+
+repositories {
+    maven {
+        url 'https://oss.sonatype.org/content/groups/public'
+    }
 }
 
 compileJava {
