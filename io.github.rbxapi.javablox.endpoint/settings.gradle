@@ -1,4 +1,0 @@
-rootProject.name = 'javablox-endpoint'
-include 'javablox-api'
-
-project(':javablox-api').projectDir = new File(settingsDir, "../io.github.rbxapi.javablox.api")
