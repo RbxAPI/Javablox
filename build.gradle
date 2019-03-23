@@ -41,12 +41,6 @@ repositories {
     }
 }
 
-dependencies {
-    implementation 'io.github.rbxapi:javablox-endpoint:1.0-SNAPSHOT'
-    testImplementation project(':javablox-endpoint')
-}
-
-ext.moduleName = 'io.github.rbxapi.javablox'
 
 
 
