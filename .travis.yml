@@ -11,7 +11,7 @@ cache:
   - "$HOME/.gradle/caches/"
   - "$HOME/.gradle/wrapper/"
 before_install:
-- openssl aes-256-cbc -K "$secret" -in secrets.tar.enc -out secrets.tar -d
+- openssl aes-256-cbc -K "$secret" -iv 0 -in secrets.tar.enc -out secrets.tar -d
 - chmod +x gradlew
 - chmod +x deploy.sh
 - tar xvf secrets.tar
