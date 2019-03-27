@@ -1,10 +1,13 @@
 # Javablox
 Developed by [TCLRainbow](https://github.com/TCLRainbow)
+
 [This library is based on this endpoint list](https://github.com/AntiBoomz/BTRoblox/blob/master/README.md#api-docs)
 
-[![TCLRainbow Discord](https://discordapp.com/widget?id=285366651312930817&theme=dark)](https://discord.gg/6PjhjCD)
-[![Largest Roblox API Discord](https://img.shields.io/discord/332692436478590986.svg?style=popout)](https://discord.gg/EDXNdAT)
-[![Build Status](https://travis-ci.org/RbxAPI/Javablox.svg?branch=master)](https://travis-ci.org/RbxAPI/Javablox)
+TCLRainbow Discord: [![TCLRainbow discord](https://img.shields.io/discord/285366651312930817.svg)](https://discord.gg/6PjhjCD)
+
+Largest Roblox API Discord community: [![Largest Roblox API Discord](https://img.shields.io/discord/332692436478590986.svg?style=popout)](https://discord.gg/EDXNdAT)
+
+Travis CI: [![Build Status](https://travis-ci.org/RbxAPI/Javablox.svg?branch=master)](https://travis-ci.org/RbxAPI/Javablox)
 
 # Pipeline
 Javablox works in the following way:
