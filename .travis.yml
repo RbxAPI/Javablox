@@ -2,7 +2,7 @@ language: java
 install: true
 dist: xenial
 script:
-- "./gradlew build --scan -s -DmavenUser=Travis -DmavenPassword=Stub -Dsigning.keyId=A40AAFFF -Dsigning.password=Stub signing.secretKeyRingFile=javablox.gpg"
+- "./gradlew build --scan -s -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -13,7 +13,7 @@ cache:
 before_install:
 - chmod +x gradlew
 - chmod +x deploy.sh
-- "./gradlew wrapper -DmavenUser=Travis -DmavenPassword=Stub -Dsigning.keyId=A40AAFFF -Dsigning.password=Stub signing.secretKeyRingFile=javablox.gpg"
+- "./gradlew wrapper -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
 jdk: oraclejdk11
 after_success:
 - echo $sslkey | gpg --passphrase-fd 0 secrets.tar.gpg
