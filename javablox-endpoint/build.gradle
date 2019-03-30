@@ -20,65 +20,11 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     from javadoc.destinationDir
 }
 
-dependencies {
-    implementation 'io.github.rbxapi:javablox-api:1.0-SNAPSHOT'
-    testImplementation project(':javablox-api')
-}
-
 repositories {
     maven {
         url 'https://oss.sonatype.org/content/groups/public'
     }
 }
-
-compileJava {
-    inputs.property("moduleName", moduleName)
-    doFirst {
-        options.compilerArgs = [
-                '--module-path', classpath.asPath,
-                '--add-modules', 'io.github.rbxapi.javablox.api'
-        ]
-        classpath = files()
-    }
-}
-
-compileTestJava {
-    inputs.property("moduleName", moduleName)
-    doFirst {
-        options.compilerArgs = [
-                '--module-path', classpath.asPath,
-                '--add-modules', 'io.github.rbxapi.javablox.api',
-                '--add-modules', 'org.junit.jupiter.api',
-                '--add-reads', "$moduleName=org.junit.jupiter.api",
-                '--patch-module', "$moduleName=" + files(sourceSets.test.java.srcDirs).asPath,
-        ]
-        classpath = files()
-    }
-}
-
-javadoc {
-    inputs.property("moduleName", moduleName)
-    doFirst {
-        exclude "**/module-info.java"
-        options.addStringOption('-module-path', classpath.asPath)
-        options.addStringOption('-add-modules', 'io.github.rbxapi.javablox.api')
-        options.addStringOption('-class-path', "")
-        options.addBooleanOption('html5', true)
-        options.addBooleanOption('verbose', true)
-    }
-}
-
-test {
-    useJUnitPlatform()
-
-    doFirst {
-        jvmArgs = [
-                '--module-path', classpath.asPath,
-                '--add-modules', 'io.github.rbxapi.javablox.api'
-        ]
-    }
-}
-
 
 publishing {
     publications {

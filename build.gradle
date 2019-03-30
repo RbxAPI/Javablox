@@ -38,6 +38,7 @@ subprojects {
             doFirst {
                 options.compilerArgs = [
                         '--module-path', classpath.asPath,
+                        '--add-modules', 'io.github.rbxapi.javablox.api'
                 ]
                 classpath = files()
             }
@@ -48,24 +49,35 @@ subprojects {
             doFirst {
                 options.compilerArgs = [
                         '--module-path', classpath.asPath,
-                        '--add-modules', 'junit',
-                        '--add-reads', "$moduleName=junit",
+                        '--add-modules', 'io.github.rbxapi.javablox.api',
+                        '--add-modules', 'org.junit.jupiter.api',
+                        '--add-reads', "$moduleName=org.junit.jupiter.api",
                         '--patch-module', "$moduleName=" + files(sourceSets.test.java.srcDirs).asPath,
                 ]
                 classpath = files()
             }
         }
 
-        test {
+        javadoc {
             inputs.property("moduleName", moduleName)
+            doFirst {
+                exclude "**/module-info.java"
+                options.addStringOption('-module-path', classpath.asPath)
+                options.addStringOption('-add-modules', 'io.github.rbxapi.javablox.api')
+                options.addStringOption('-class-path', "")
+                options.addBooleanOption('html5', true)
+                options.addBooleanOption('verbose', true)
+            }
+        }
+
+        test {
+            useJUnitPlatform()
+
             doFirst {
                 jvmArgs = [
                         '--module-path', classpath.asPath,
-                        '--add-modules', 'ALL-MODULE-PATH',
-                        '--add-reads', "$moduleName=junit",
-                        '--patch-module', "$moduleName=" + files(sourceSets.test.java.outputDir).asPath,
+                        '--add-modules', 'io.github.rbxapi.javablox.api'
                 ]
-                classpath = files()
             }
         }
     }
