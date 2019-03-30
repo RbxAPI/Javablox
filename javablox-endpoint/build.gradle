@@ -83,6 +83,8 @@ javadoc {
 
 dependencies {
     implementation project(':javablox-api')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 }
 
 // Don't add wrapper because it is included in Javablox
