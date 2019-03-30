@@ -11,18 +11,17 @@ import java.util.concurrent.CompletableFuture;
  * Net client for Javablox Endpoint
  */
 public final class Client {
-    private static HttpClient client;
+    private static HttpClient client = HttpClient.newHttpClient();
 
-    private Client() {
-        client = HttpClient.newHttpClient();
-    }
-
-    private static HttpRequest.Builder genRequest(String filledUrl, String... headers) {
+    private static HttpRequest.Builder genRequest(String filledUrl) {
         return HttpRequest.newBuilder()
                 .uri(URI.create(filledUrl))
                 .timeout(Duration.ofSeconds(10))
-                .header("Content-Type", "application/json")
-                .headers(headers);
+                .header("Content-Type", "application/json");
+    }
+
+    private static HttpRequest.Builder genRequest(String filledUrl, String... headers) {
+        return genRequest(filledUrl).headers(headers);
     }
 
     private static CompletableFuture<String> getStringCompletableFuture(HttpRequest request) {
@@ -39,11 +38,20 @@ public final class Client {
     public static CompletableFuture<String> get(String filledUrl, String... headers) {
         HttpRequest request = genRequest(filledUrl, headers).GET().build();
         return getStringCompletableFuture(request);
+    }
 
+    public static CompletableFuture<String> get(String filledUrl) {
+        HttpRequest request = genRequest(filledUrl).GET().build();
+        return getStringCompletableFuture(request);
     }
 
     public static CompletableFuture<String> post(String filledUrl, String... headers) {
         HttpRequest request = genRequest(filledUrl, headers).POST(HttpRequest.BodyPublishers.noBody()).build();
+        return getStringCompletableFuture(request);
+    }
+
+    public static CompletableFuture<String> post(String filledUrl) {
+        HttpRequest request = genRequest(filledUrl).POST(HttpRequest.BodyPublishers.noBody()).build();
         return getStringCompletableFuture(request);
     }
 

@@ -68,6 +68,9 @@ subprojects {
                 classpath = files()
             }
             useJUnitPlatform()
+            testLogging {
+                events "passed", "skipped", "failed"
+            }
         }
     }
 }

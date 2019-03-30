@@ -2,7 +2,7 @@ language: java
 install: true
 dist: xenial
 script:
-- "./gradlew build --scan -s -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
+- "./gradlew test -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
