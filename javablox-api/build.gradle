@@ -10,7 +10,6 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.11
 
-ext.moduleName = 'io.github.rbxapi.javablox.api'
 
 task sourcesJar(type: Jar, dependsOn: classes) {
     classifier = 'sources'
