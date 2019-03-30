@@ -2,7 +2,7 @@ language: java
 install: true
 dist: xenial
 script:
-- "./gradlew build --scan -s"
+- "./gradlew build --scan -s -x sign -x publish"
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -11,13 +11,13 @@ cache:
   - "$HOME/.gradle/caches/"
   - "$HOME/.gradle/wrapper/"
 before_install:
-- echo $sslkey | gpg --passphrase-fd 0 secrets.tar.gpg
 - chmod +x gradlew
 - chmod +x deploy.sh
-- tar xvf secrets.tar
-- "./gradlew wrapper"
+- "./gradlew wrapper -x sign -x publish"
 jdk: oraclejdk11
 after_success:
+- echo $sslkey | gpg --passphrase-fd 0 secrets.tar.gpg
+- tar xvf secrets.tar
 - "./deploy.sh"
 - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
 - chmod +x send.sh
