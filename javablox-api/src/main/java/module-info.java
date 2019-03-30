@@ -1,4 +1,6 @@
 module io.github.rbxapi.javablox.api {
+    exports io.github.rbxapi.javablox.url;
+
     exports io.github.rbxapi.javablox.api.accountsettings.accountinfosettings;
     exports io.github.rbxapi.javablox.api.accountsettings.email;
     exports io.github.rbxapi.javablox.api.accountsettings.privacysettings;

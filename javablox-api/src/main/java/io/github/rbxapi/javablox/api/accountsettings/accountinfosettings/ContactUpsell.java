@@ -1,5 +1,7 @@
 package io.github.rbxapi.javablox.api.accountsettings.accountinfosettings;
 
+import java.util.concurrent.CompletableFuture;
+
 /**
  * https://accountsettings.roblox.com/docs#/AccountInfoSettings
  */
@@ -12,7 +14,7 @@ public interface ContactUpsell {
      * "upsellScreenType": "None"
      * }
      */
-    String getUpsell();
+    CompletableFuture<String> getUpsell();
 
     /**
      * Suppresses the ContactUpsell screen for the authenticated user
@@ -21,5 +23,5 @@ public interface ContactUpsell {
      * @param suppress value
      * @return {}
      */
-    String suppressUpsell(boolean suppress);
+    CompletableFuture<String> suppressUpsell(boolean suppress);
 }

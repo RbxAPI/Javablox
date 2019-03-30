@@ -14,6 +14,7 @@ Javablox works in the following way:
 * Request data from URL by methods
 * Parse or serialise the data, depends on how the programmer wants the library to work
 * Return values from the HTTP Response or throw exceptions
+**NOTE:** This library prefers "async all the way", therefore ``CompletableFuture<>`` is used.
 
 # Library Architecture
 ## 1. Core Level: HTTP Layer
@@ -27,12 +28,12 @@ public interface UserService {
 /** HTTP GET
  *  @return {"username": "Pythonic-Rainbow"}
 **/
-String getUsername(double userId);
+CompletableFuture<String> getUsername(double userId);
 
 /** HTTP POST
  *  @return {} (Usually HTTP Status Code, empty object often means successful POST)
 **/
-String setUsername(String username, double userId);
+CompletableFuture<String> setUsername(String username, double userId);
 }
 ```
 
@@ -47,20 +48,17 @@ Because endpoints will not change, it is recommended to code in `static`.
 ```java
 // Example Endpoint Handler
 // Defines how a HTTP Client works
-// If you wish the client to run in async, you should change codes in this layer.
 public class ClientHandler {
     private SomeHTTPClient client = new SomeHTTPClient();
 
     @Override
-    String get(String filledUrl) {
-        SomeHTTPResponse response = some_client.read(filledUrl);
-        return response.toString();
+    CompletableFuture<String> get(String filledUrl) {
+        return client.getAsync(filledUrl);
     }
 
     @Override
-    String post(String filledUrl) {
-        SomeHTTPResponse response = some_client.send(filledUrl);
-        return response.toString();
+    CompletableFuture<String> post(String filledUrl) {
+        return client.postAsync(filledUrl);
     }
 }
 ```
@@ -69,17 +67,15 @@ After the client is defined, we will implement the API.
 // Example Javablox API implementation
 public class UserEndpoint implements User {
     @Override
-    String getUsername(double userId) {
+    CompletableFuture<String> getUsername(double userId) {
         return ClientHandler.get(MessageFormat.format("https://user.roblox.com/getuser?userid={0}", userid)); // return "Pythonic-Rainbow"
     }
 
     // It is common for POST methods to return updated value (if available) when the request is success.
     // If the request failed, you can return the original value or simply an empty string.
     @Override
-    String setUsername(String username, double userId) {
-        String response = ClientHandler.post(MessageFormat.format("https:/user.roblox.com/setusername?userid={0}&username={1}", userId, username));
-        if (response == "{}") return getUsername(userId);
-        return username;
+    CompletableFuture<String> setUsername(String username, double userId) {
+        return ClientHandler.post(MessageFormat.format("https:/user.roblox.com/setusername?userid={0}&username={1}", userId, username));
     }
 }
 ```
@@ -96,7 +92,7 @@ Javablox ships with a default implementation that uses `java.net.http` HTTP Clie
 public class UserService {
     private static UserEndpoint user = new UserEndpoint();
 
-    String getUsername(double userId) throws JavabloxExceptionA, JavabloxExceptionB {
+    CompletableFuture<String> getUsername(double userId) throws JavabloxExceptionA, JavabloxExceptionB {
         JSON j = JSON.parse(user.getUsername(userId));
         if j.has("error") {
             //throw multiple exceptions
@@ -109,7 +105,7 @@ public class UserService {
     // It is common for POST methods to return updated value (if available) when the request is success.
     // If the request failed, you can return the original value or simply an empty string.
     @Override
-    String setUsername(String username, double userId) {
+    CompletableFuture<String> setUsername(String username, double userId) {
         String response = EndpointHandler.post(MessageFormat.format("https:/user.roblox.com/setusername?userid={0}&username={1}", userId, username));
         if (response == "{}") return getUsername(userId);
         return username;

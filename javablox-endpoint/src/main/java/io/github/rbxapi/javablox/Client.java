@@ -25,6 +25,11 @@ public final class Client {
                 .headers(headers);
     }
 
+    private static CompletableFuture<String> getStringCompletableFuture(HttpRequest request) {
+        return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                .thenApply(HttpResponse::body);
+    }
+
     /**
      * Performs HTTP GET request.
      * @param filledUrl URL with parameters filled in
@@ -33,10 +38,13 @@ public final class Client {
      */
     public static CompletableFuture<String> get(String filledUrl, String... headers) {
         HttpRequest request = genRequest(filledUrl, headers).GET().build();
-        return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
-                .exceptionally(e -> null)
-                .thenApply(HttpResponse::body);
+        return getStringCompletableFuture(request);
 
+    }
+
+    public static CompletableFuture<String> post(String filledUrl, String... headers) {
+        HttpRequest request = genRequest(filledUrl, headers).POST(HttpRequest.BodyPublishers.noBody()).build();
+        return getStringCompletableFuture(request);
     }
 
 }

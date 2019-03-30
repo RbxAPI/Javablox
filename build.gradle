@@ -6,8 +6,8 @@ plugins {
 
 group 'io.github.rbxapi'
 version '1.0-SNAPSHOT'
-
 sourceCompatibility = 1.11
+def globalgradleVersion = '5.2.1'
 
 repositories {
     mavenCentral()
@@ -25,13 +25,54 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 
 subprojects {
     wrapper{
-        gradleVersion = '5.2.1'
+        gradleVersion = globalgradleVersion
         distributionType = Wrapper.DistributionType.BIN
+    }
+    afterEvaluate {
+        repositories {
+            jcenter()
+        }
+
+        compileJava {
+            inputs.property("moduleName", moduleName)
+            doFirst {
+                options.compilerArgs = [
+                        '--module-path', classpath.asPath,
+                ]
+                classpath = files()
+            }
+        }
+
+        compileTestJava {
+            inputs.property("moduleName", moduleName)
+            doFirst {
+                options.compilerArgs = [
+                        '--module-path', classpath.asPath,
+                        '--add-modules', 'junit',
+                        '--add-reads', "$moduleName=junit",
+                        '--patch-module', "$moduleName=" + files(sourceSets.test.java.srcDirs).asPath,
+                ]
+                classpath = files()
+            }
+        }
+
+        test {
+            inputs.property("moduleName", moduleName)
+            doFirst {
+                jvmArgs = [
+                        '--module-path', classpath.asPath,
+                        '--add-modules', 'ALL-MODULE-PATH',
+                        '--add-reads', "$moduleName=junit",
+                        '--patch-module', "$moduleName=" + files(sourceSets.test.java.outputDir).asPath,
+                ]
+                classpath = files()
+            }
+        }
     }
 }
 
 wrapper{
-    gradleVersion = '5.2.1'
+    gradleVersion = globalgradleVersion
     distributionType = Wrapper.DistributionType.BIN
 }
 

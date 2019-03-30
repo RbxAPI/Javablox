@@ -6,6 +6,7 @@ plugins {
 
 group 'io.github.rbxapi'
 version '1.0-SNAPSHOT'
+ext.moduleName = 'io.github.rbxapi.javablox.endpoint'
 
 sourceCompatibility = 1.11
 
@@ -31,7 +32,7 @@ repositories {
 }
 
 compileJava {
-    //inputs.property("moduleName", moduleName)
+    inputs.property("moduleName", moduleName)
     doFirst {
         options.compilerArgs = [
                 '--module-path', classpath.asPath,
@@ -42,7 +43,7 @@ compileJava {
 }
 
 compileTestJava {
-    //inputs.property("moduleName", moduleName)
+    inputs.property("moduleName", moduleName)
     doFirst {
         options.compilerArgs = [
                 '--module-path', classpath.asPath,
@@ -56,7 +57,7 @@ compileTestJava {
 }
 
 javadoc {
-    //inputs.property("moduleName", moduleName)
+    inputs.property("moduleName", moduleName)
     doFirst {
         exclude "**/module-info.java"
         options.addStringOption('-module-path', classpath.asPath)
