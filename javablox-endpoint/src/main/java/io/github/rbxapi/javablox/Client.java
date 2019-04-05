@@ -55,4 +55,6 @@ public final class Client {
         return getStringCompletableFuture(request);
     }
 
+    //TODO: Add POST method with String data BodyPublisher
+
 }

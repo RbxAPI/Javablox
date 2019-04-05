@@ -8,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class AccountTest {
     @Test
     public void ContactUpsellTest() {
-        assertEquals(TestStrings.unauth, AccountSettingEndpoint.accountInfoEndpoint.getUpsell().join());
+        assertEquals(TestStrings.unauth, AccountSettingEndpoint.userAccountInfo.getUpsell().join());
     }
 
     @Test
     public void suppressUpsellTest() {
-        assertEquals(TestStrings.unauth, AccountSettingEndpoint.accountInfoEndpoint.suppressUpsell(true).join());
+        assertEquals(TestStrings.unauth, AccountSettingEndpoint.userAccountInfo.suppressUpsell(true).join());
     }
 }

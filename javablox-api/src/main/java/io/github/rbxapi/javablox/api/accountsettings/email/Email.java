@@ -1,5 +1,7 @@
 package io.github.rbxapi.javablox.api.accountsettings.email;
 
+import java.util.concurrent.CompletableFuture;
+
 /**
  * https://accountsettings.roblox.com/docs#!/Email
  */
@@ -14,7 +16,7 @@ public interface Email {
      * "verified": true
      * }
      */
-    String getEmail();
+    CompletableFuture<String> getEmail();
 
     /**
      * Updates the authenticated user's email address
@@ -26,7 +28,7 @@ public interface Email {
      *                    }
      * @return {}
      */
-    String setEmail(String requestBody);
+    CompletableFuture<String> setEmail(String requestBody);
 
     /**
      * Send verify email to the authenticated user's email address
@@ -34,5 +36,5 @@ public interface Email {
      *
      * @return {}
      */
-    String sendVerifyEmail();
+    CompletableFuture<String> sendVerifyEmail();
 }
