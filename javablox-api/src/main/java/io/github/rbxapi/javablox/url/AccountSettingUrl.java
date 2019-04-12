@@ -6,8 +6,8 @@ public class AccountSettingUrl {
     public static final String GET_CONTACT_UPSELL = dns1 + "user/screens/contact-upsell";
     public static final String POST_SUPPRESS_UPSELL = GET_CONTACT_UPSELL + "/suppress?suppress=";
 
-    public static final String GET_SETTINGS_GROUPS = "account/settings/settings-groups";
+    public static final String GET_SETTINGS_GROUPS = dns1 + "account/settings/settings-groups";
 
-    public static final String GET_EMAIL = "email";
-    //TODO: Add 2 more email URL
+    public static final String EMAIL = dns1 + "email";
+    public static final String EMAIL_VERIFY = EMAIL + "/verify";
 }

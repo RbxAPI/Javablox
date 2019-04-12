@@ -34,7 +34,8 @@ public interface Email {
      * Send verify email to the authenticated user's email address
      * https://accountsettings.roblox.com/docs#!/Email/post_v1_email_verify
      *
+     * @param request freeItem : Boolean
      * @return {}
      */
-    CompletableFuture<String> sendVerifyEmail();
+    CompletableFuture<String> sendVerifyEmail(String request);
 }

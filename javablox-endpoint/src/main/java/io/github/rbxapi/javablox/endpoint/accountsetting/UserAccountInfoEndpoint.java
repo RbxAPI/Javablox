@@ -9,7 +9,7 @@ import io.github.rbxapi.javablox.url.AccountSettingUrl;
 
 import java.util.concurrent.CompletableFuture;
 
-public class UserAccountInfoEndpoint extends BaseEndpoint implements ContactUpsell, Account, Email {
+public class UserAccountInfoEndpoint implements ContactUpsell, Account, Email {
 
     @Override
     public CompletableFuture<String> getUpsell() {
@@ -28,18 +28,18 @@ public class UserAccountInfoEndpoint extends BaseEndpoint implements ContactUpse
 
     @Override
     public CompletableFuture<String> getEmail() {
-        return Client.get(AccountSettingUrl.GET_EMAIL);
+        return Client.get(AccountSettingUrl.EMAIL);
     }
 
     //TODO: Implement
     @Override
     public CompletableFuture<String> setEmail(String requestBody) {
-        return null;
+        return Client.post(AccountSettingUrl.EMAIL, requestBody);
     }
 
     //TODO: Implement
     @Override
-    public CompletableFuture<String> sendVerifyEmail() {
-        return null;
+    public CompletableFuture<String> sendVerifyEmail(String request) {
+        return Client.post(AccountSettingUrl.EMAIL_VERIFY, request);
     }
 }

@@ -55,6 +55,9 @@ public final class Client {
         return getStringCompletableFuture(request);
     }
 
-    //TODO: Add POST method with String data BodyPublisher
+    public static CompletableFuture<String> post(String filledUrl, String body) {
+        HttpRequest request = genRequest(filledUrl).POST(HttpRequest.BodyPublisher.ofString(body)).build();
+        return getStringCompletableFuture(request);
+    }
 
 }

@@ -1,5 +1,7 @@
 package io.github.rbxapi.javablox.api.accountsettings.privacysettings;
 
+import java.util.concurrent.CompletableFuture;
+
 /**
  * https://accountsettings.roblox.com/docs#/PrivacySettings
  */
@@ -13,7 +15,7 @@ public interface Privacy {
      * "phoneDiscovery": "NoOne"
      * }
      */
-    String getPrivacySetting();
+    CompletableFuture<String> getPrivacySetting();
 
     /**
      * Updates a user's privacy settings.
@@ -24,7 +26,7 @@ public interface Privacy {
      *                             }
      * @return {}
      */
-    String patchPrivacySetting(String UpdatePrivacyRequest);
+    CompletableFuture<String> patchPrivacySetting(String UpdatePrivacyRequest);
 
     /**
      * Gets a user's privacy settings info.
@@ -34,5 +36,5 @@ public interface Privacy {
      * "isPhoneDiscoveryEnabled": true
      * }
      */
-    String getPrivacyInfo();
+    CompletableFuture<String> getPrivacyInfo();
 }
