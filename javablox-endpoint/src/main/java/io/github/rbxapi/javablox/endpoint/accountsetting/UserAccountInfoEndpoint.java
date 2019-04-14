@@ -31,13 +31,11 @@ public class UserAccountInfoEndpoint implements ContactUpsell, Account, Email {
         return Client.get(AccountSettingUrl.EMAIL);
     }
 
-    //TODO: Implement
     @Override
     public CompletableFuture<String> setEmail(String requestBody) {
         return Client.post(AccountSettingUrl.EMAIL, requestBody);
     }
 
-    //TODO: Implement
     @Override
     public CompletableFuture<String> sendVerifyEmail(String request) {
         return Client.post(AccountSettingUrl.EMAIL_VERIFY, request);

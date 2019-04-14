@@ -10,4 +10,8 @@ public class AccountSettingUrl {
 
     public static final String EMAIL = dns1 + "email";
     public static final String EMAIL_VERIFY = EMAIL + "/verify";
+
+    public static final String PRIVACY = dns1 + "privacy";
+    public static final String PRIVACY_INFO = PRIVACY + "/info";
+
 }

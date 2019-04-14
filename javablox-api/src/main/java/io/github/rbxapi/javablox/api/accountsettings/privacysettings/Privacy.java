@@ -21,12 +21,12 @@ public interface Privacy {
      * Updates a user's privacy settings.
      * https://accountsettings.roblox.com/docs#!/PrivacySettings/patch_v1_privacy
      *
-     * @param UpdatePrivacyRequest {
+     * @param model {
      *                             "phoneDiscovery": "NoOne"
      *                             }
      * @return {}
      */
-    CompletableFuture<String> patchPrivacySetting(String UpdatePrivacyRequest);
+    CompletableFuture<String> patchPrivacySetting(String model);
 
     /**
      * Gets a user's privacy settings info.

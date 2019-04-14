@@ -56,7 +56,12 @@ public final class Client {
     }
 
     public static CompletableFuture<String> post(String filledUrl, String body) {
-        HttpRequest request = genRequest(filledUrl).POST(HttpRequest.BodyPublisher.ofString(body)).build();
+        HttpRequest request = genRequest(filledUrl).POST(HttpRequest.BodyPublishers.ofString(body)).build();
+        return getStringCompletableFuture(request);
+    }
+
+    public static CompletableFuture<String> patch(String filledUrl, String body) {
+        HttpRequest request = genRequest(filledUrl).method("PATCH", HttpRequest.BodyPublishers.ofString(body)).build();
         return getStringCompletableFuture(request);
     }
 
