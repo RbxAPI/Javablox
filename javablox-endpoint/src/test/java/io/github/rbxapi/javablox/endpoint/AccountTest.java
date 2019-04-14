@@ -21,6 +21,6 @@ public class AccountTest {
 
     @Test
     public void settingsGroups() {
-        assertEquals(setGroupStr, AccountSettingEndpoint.userAccountInfo.getSettingsGroups().join());
+        assertEquals(TestStrings.unauth, AccountSettingEndpoint.userAccountInfo.getSettingsGroups().join());
     }
 }
