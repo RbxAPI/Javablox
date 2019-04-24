@@ -1,3 +1,1 @@
-//rootProject.name = 'javablox'
-include ':javablox-api', ':javablox-endpoint'
-
+include ':javablox-api'
