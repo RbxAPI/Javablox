@@ -72,6 +72,10 @@ subprojects {
                 events "passed", "skipped", "failed"
             }
         }
+        javadoc {
+            options.addBooleanOption('html5', true)
+            options.addStringOption('-module-path', classpath.asPath)
+        }
     }
 }
 
