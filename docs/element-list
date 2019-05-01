@@ -1,0 +1,5 @@
+module:io.github.rbxapi.javablox.api
+rbxapi.javablox.api
+rbxapi.javablox.api.accountsettings
+rbxapi.javablox.response.accountsettings
+rbxapi.javablox.response.common.email
