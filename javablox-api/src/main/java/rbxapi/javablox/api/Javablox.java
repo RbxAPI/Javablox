@@ -5,6 +5,8 @@ import okhttp3.Request;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+//TODO: Move to javablox-endpoint
+
 /**
  * The base class to easily utilise the lib
  */

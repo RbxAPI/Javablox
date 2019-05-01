@@ -7,7 +7,7 @@ plugins {
 group 'io.github.rbxapi'
 version '1.0-SNAPSHOT'
 sourceCompatibility = 1.11
-def globalgradleVersion = '5.4'
+def globalgradleVersion = '5.4.1'
 
 repositories {
     mavenCentral()
@@ -142,4 +142,5 @@ signing {
 javadoc {
     options.addBooleanOption('html5', true)
     options.addStringOption('-module-path', classpath.asPath)
+    options.tags = [ "implNote" ]
 }

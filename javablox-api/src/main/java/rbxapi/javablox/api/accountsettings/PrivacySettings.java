@@ -5,6 +5,7 @@ import rbxapi.javablox.response.accountsettings.SetInventoryTradePrivacy;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 
 public interface PrivacySettings {
@@ -30,7 +31,7 @@ public interface PrivacySettings {
     @GET("v1/privacy")
     Call<PhoneDiscovery> getPhoneDiscoveryPrivacy();
 
-    @POST("v1/privacy")
+    @PATCH("v1/privacy")
     Call setPhoneDiscoveryPrivacy(@Body PhoneDiscovery model);
 
     @GET("v1/privacy/info")
