@@ -2,7 +2,8 @@ language: java
 install: true
 dist: xenial
 script:
-- "./gradlew test -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
+- "./gradlew test -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF
+  -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -13,7 +14,8 @@ cache:
 before_install:
 - chmod +x gradlew
 - chmod +x deploy.sh
-- "./gradlew wrapper -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
+- "./gradlew wrapper -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF
+  -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
 jdk: oraclejdk11
 after_success:
 - echo $sslkey | gpg --passphrase-fd 0 secrets.tar.gpg
@@ -30,6 +32,6 @@ after_failure:
 - "./send.sh failure $Sanjay"
 env:
   global:
-  - secure: M76zMhnY3qGEAkf39LoQS8Q9/MIuRXQO14cAirH8fdQouVaIuf6a21gbqNkiJddTuTIH+25nkyjkMHVZHZ4KB5dhnGDjB0oqnvglJsETvVQMvDBnXJgbPsfmyDUsrarO9tpuFBuI+L2MyvuG/8FoInTD5X57RJTEGXrJUfBgNtGVQ5jPX5gTa7l0Jez8nJLShHjFePNjR0D3s6s8fwHJZKYT3xakaPVZDJca0phU5lEZsy3SCqKzYDdhLWvDEVh7/3YoD3fhO9RNiIzZz+fDQRRaY6MSOohlh6zZZG1n5411J9RUe4IrP/ugAlULXRa2WEYedp3+QVwnQo+a29o89mbCHAPh0DrMjog+TKJDl2OnY6+n+wMoIqW4UKdwV89rQNg9KfP34QVxCpVUxWc9y3ovTX1nUb0R3ipxHnasUaTuwuQHB9/48p/mHdgN2BNicqWe1fmw3MzVHWF8b9Z9R47ED/FYJhfGXugu0kOEv0nuaOTVEz/eMnCLLJ1zOASGWe2CKjLSx5kTA1V+wAYCRSWVUbpePYTtE6rOKxHR4JwVFTVRgvKTqMY+fWarL7eOp/3eKL8LrMyEN9N+W0JP+skjTIFW6yzlrYWLGlRqYLGeCgULCIr1fDi2eKxlpFLzgqASKYRcQdLqhP73rOMtJ7uxCTjLjZ+V62nxBNE8RnU=
   - secure: cHaVBFMelAJ/8s3rtOgIL/KyFGlnt4NHItNMO7ADYy/0aCAHqqZQxq2rD3qDjWMziZuDR/QGB+Gt0G+XoUJTG4RUlA4o/wh9e5cPpwrITPAUqmVnPnY3foARvSv6ZNXCj/84Ze8RfyG4Rc1J/fs2iuWoQDB2biI13zr2dOHTZ3gUn4QnbpH653oCvGECDTYIG73m5rv1SZSu+FYk48zLdq+Q4kWUKjLRLCTPlRszCKWVtVvxIYoI6XCZK4azfVsLC/3TnGHlhtAErKGRGOaAwQCIOAndeyKvEyIPr8+gw38e6Mm1A6zjL4kH+rohDLiRibbrSxWJaSuUU3Gp9nBBdklkzLxPD1XzCJc1DnRgNbBkKTChX4x5ypb83VPHJK5kn2+ZhoEPdFaW3VXFsGkDitTsCG/Io3hKKRWkJ856BCblQHlWkKMFdxontg09btQfssgSQbZGTYVYVM3Rtkq2zW9wu7Z2bfaa8hYpqZMKgNALpjxvPcKc707+WLSWryc78sKMsUdfBB26wSunLtlyrU1RSSHSJU1RLmFagnhfTzDEL43TL2R4I80t247V6PoqBZsIys2sImQ3/UKQkxK3ebXwBtpcMG2nsmAOWCVLo3fHkj65Wusit+RntZw9XCUE2iHKqnQZJPMEF6s5w6fNzZJ1C03kPv4Az7MMALcwh/g=
   - secure: NKvBHmd3Yjo8zcScNT7exvyQQtXr9r+fhsR+QXi54OCa0LPUQFGNph5hZjT16vWDGO01Yw+oINtx0V7G1/ZsG376EUAKGEHtlu8DnLAMiXyg4UHRUYyOhOlvh23/+v++N4fC2WLzIhucj30brRdciDUhHZCW8xWOuVUKKVs0BZ/vTzzIaOS61MKJQtawQSa3TXYAlZqUChKdxxbehZGJ8RSRRIfGQ18worABwpvSjIq0MvYnNDvIR+uUsWGt+N0vdOi+NSN/Wk5SFxG4P2tTKyY97KVKxkBXuGaUXNJfc6mkJ1NO502A5+Rl0hG5eZbY7FohCsr/0DhoeRTKzSDUjRF0gAA5r6seVl/C/yUoM8UbGU1IJnyrzW20ncsWv4em6f7v5MZSP0wLeC/VsoN6rPq+wuruWuETt+0yzkdpfH5qmPXS5PblCvz9e61cJLUjdxiBJMTOpS8ha54L9/NfbY75L8hJyz/DhaNaOT8go9pAibDs9sFmLEmBVh8BcfdAair90RwUPPzVun5NbhIkPIfoa6PDvc4llh5k3J2A3FxEbpfShLS6PTZDgUu3zSYio6nkVWJV1RoXbZJYJj7YrNAHnaFF2mGjfNF4uunP0G0UTEi1Ki78MMeWhWOrlvaM7cHgIhnKAuFnOSlyZoYUDQyBtMoU8PkFKg5R6F5OkNE=
+  - secure: AIzoXRlShYJZm3Hdz8HCUVrgOv0+R9hqLym9TrDGU+RwWmrlljMCO2BA3wjJAaQG5PZnDpTl9l9YfmJjFxpxpz9Q9meBGaiIvVkblCaK5A4zL16IESGkypf+FG+Mv61l1gg5E6ksDFePhuFPC0EW2/5pqFLo4sTXbhATLd/ER+c7WN0pA5mOI4QE1MpR6Uy17kdx/UK2XoMPfqY1fA4oMr861521LBzVVJ+aW2sw/TFFMzPASGN+6T7QcaZ5OoSbOpxvT0CamSvyGeepB7ByOgdf/0u0r9obPsDsgHmdB7DNoPN4PbGJZTvwK/cM8LgaEodTDusT6GpfUWsQxS2mQzr3uUfevgebn5iiCqDaH9wYIBscCZ85RvOjy9eXzyETbI25stRhVmMYrZC3254t4cNxyGtzdvaw03/w5KVU19+yG1DDJqxzrkK3mW/En/s2kAFizFsEyKH0TLBNpm3cRway8rfUhGCagp2O9EGyIfWPBU5PwcEAwY/96iCfNyBPK4g7XZ4EYr3hdQHCLHmyogdi6ygMBG59CtijCrJD4p1WOiJ4ebpM0UNKQU6RDoAQtf/SRjGxfdd/tMOmZRgOuVDhTmNUvn9u725OYaijCLWQQU83NXGU94/9/+Lk50nIIMbUnFfwyVCvP2WRX2CH0JJFk/yYMhqbazFCBuALQcs=
