@@ -1,6 +1,6 @@
 package rbxapi.javablox.api.accountsettings;
 
-import rbxapi.javablox.response.accountsettings.XboxUsernameValid;
+import rbxapi.javablox.model.accountsettings.XboxUsernameValid;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Header;

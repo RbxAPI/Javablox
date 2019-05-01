@@ -1,7 +1,7 @@
 package rbxapi.javablox.api.accountsettings;
 
-import rbxapi.javablox.response.accountsettings.*;
-import rbxapi.javablox.response.accountsettings.SetInventoryTradePrivacy;
+import rbxapi.javablox.model.accountsettings.*;
+import rbxapi.javablox.model.accountsettings.SetInventoryTradePrivacy;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;

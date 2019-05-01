@@ -12,5 +12,5 @@ public interface PromotionChannel {
      * @return {}
      */
     @POST("v1/promotion-channels")
-    Call setPromotionChannels(@Body rbxapi.javablox.response.accountsettings.PromotionChannel request);
+    Call setPromotionChannels(@Body rbxapi.javablox.model.accountsettings.PromotionChannel request);
 }

@@ -1,6 +1,6 @@
 package rbxapi.javablox.api.accountsettings;
 
-import rbxapi.javablox.response.accountsettings.UpsellScreenType;
+import rbxapi.javablox.model.accountsettings.UpsellScreenType;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;

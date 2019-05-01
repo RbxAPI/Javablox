@@ -1,8 +1,8 @@
 package rbxapi.javablox.api.accountsettings;
 
-import rbxapi.javablox.response.accountsettings.ThemeTypes;
-import rbxapi.javablox.response.common.theme.ConsumerType;
-import rbxapi.javablox.response.common.theme.ThemeType;
+import rbxapi.javablox.model.accountsettings.ThemeTypes;
+import rbxapi.javablox.model.accountsettings.ConsumerType;
+import rbxapi.javablox.model.accountsettings.ThemeType;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;

@@ -1,8 +1,8 @@
 package rbxapi.javablox.api.accountsettings;
 
-import rbxapi.javablox.response.accountsettings.EmailAddressInfo;
-import rbxapi.javablox.response.accountsettings.FreeItem;
-import rbxapi.javablox.response.common.email.EmailInfo;
+import rbxapi.javablox.model.accountsettings.EmailAddressInfo;
+import rbxapi.javablox.model.accountsettings.FreeItem;
+import rbxapi.javablox.model.common.email.EmailInfo;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;

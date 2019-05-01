@@ -1,6 +1,6 @@
 package rbxapi.javablox.api.accountsettings;
 
-import rbxapi.javablox.response.accountsettings.SettingsGroup;
+import rbxapi.javablox.model.accountsettings.SettingsGroup;
 import retrofit2.Call;
 import retrofit2.http.GET;
 

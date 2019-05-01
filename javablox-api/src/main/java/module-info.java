@@ -3,11 +3,13 @@ module io.github.rbxapi.javablox.api {
     requires retrofit2;
     requires retrofit2.converter.gson;
     requires java.sql;
+    requires gson;
 
-    opens rbxapi.javablox.response.accountsettings;
-    opens rbxapi.javablox.response.common.email;
-    opens rbxapi.javablox.response.common.theme;
-    opens rbxapi.javablox.response.common.bool;
-
+    exports rbxapi.javablox.model.accountsettings;
+    exports rbxapi.javablox.model.assetdelivery;
+    exports rbxapi.javablox.model.common.email;
+    exports rbxapi.javablox.model.common.bool;
+    exports rbxapi.javablox.model.common.asset;
     exports rbxapi.javablox.api.accountsettings;
+    exports rbxapi.javablox.api.assetdelivery;
 }
