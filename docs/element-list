@@ -2,9 +2,12 @@ module:io.github.rbxapi.javablox.api
 rbxapi.javablox.api
 rbxapi.javablox.api.accountsettings
 rbxapi.javablox.api.assetdelivery
+rbxapi.javablox.api.auth
 rbxapi.javablox.model.accountsettings
 rbxapi.javablox.model.assetdelivery
+rbxapi.javablox.model.auth
 rbxapi.javablox.model.common
 rbxapi.javablox.model.common.asset
 rbxapi.javablox.model.common.bool
 rbxapi.javablox.model.common.email
+rbxapi.javablox.model.common.user

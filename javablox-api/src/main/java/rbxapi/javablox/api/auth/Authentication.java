@@ -13,7 +13,10 @@ public interface Authentication {
     @GET("v2/auth/metadata")
     Call<CookieLawNoticeTimeout> getAuthMetadata();
 
-    //TODO: Cookie auth in javablox-endpoint
+    //TODO: Return Cookie auth in javablox-endpoint
     @POST("v2/login")
     Call<LoginResponse> login(@Body LoginRequest request);
+
+    @POST("v2/logout")
+    Call logout();
 }
