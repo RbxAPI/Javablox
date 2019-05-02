@@ -10,6 +10,9 @@ module io.github.rbxapi.javablox.api {
     exports rbxapi.javablox.model.common.email;
     exports rbxapi.javablox.model.common.bool;
     exports rbxapi.javablox.model.common.asset;
+    exports rbxapi.javablox.model.auth;
+    exports rbxapi.javablox.api.auth;
+    exports rbxapi.javablox.model.common.user;
     exports rbxapi.javablox.api.accountsettings;
     exports rbxapi.javablox.api.assetdelivery;
 }
