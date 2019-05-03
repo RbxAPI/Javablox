@@ -7,6 +7,6 @@ public class User {
     @SerializedName(value = "id", alternate = "userId")
     private long id;
 
-    @SerializedName(value = "name", alternate = "userName")
+    @SerializedName(value = "name", alternate = {"userName", "username"})
     private String name;
 }

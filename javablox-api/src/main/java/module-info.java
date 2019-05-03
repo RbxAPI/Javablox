@@ -5,6 +5,7 @@ module io.github.rbxapi.javablox.api {
     requires java.sql;
     requires gson;
 
+    exports rbxapi.javablox.model.common;
     exports rbxapi.javablox.model.accountsettings;
     exports rbxapi.javablox.model.assetdelivery;
     exports rbxapi.javablox.model.common.email;
