@@ -75,6 +75,7 @@ subprojects {
         javadoc {
             options.addBooleanOption('html5', true)
             options.addStringOption('-module-path', classpath.asPath)
+            options.tags = [ "implNote" ]
         }
     }
 }

@@ -4,13 +4,17 @@ rbxapi.javablox.api.accountsettings
 rbxapi.javablox.api.assetdelivery
 rbxapi.javablox.api.auth
 rbxapi.javablox.api.avatar
+rbxapi.javablox.api.badges
 rbxapi.javablox.model.accountsettings
 rbxapi.javablox.model.assetdelivery
 rbxapi.javablox.model.auth
 rbxapi.javablox.model.avatar
+rbxapi.javablox.model.badge
 rbxapi.javablox.model.common
 rbxapi.javablox.model.common.asset
 rbxapi.javablox.model.common.avatar
+rbxapi.javablox.model.common.badge
 rbxapi.javablox.model.common.email
 rbxapi.javablox.model.common.serial
+rbxapi.javablox.model.common.universe
 rbxapi.javablox.model.common.user
