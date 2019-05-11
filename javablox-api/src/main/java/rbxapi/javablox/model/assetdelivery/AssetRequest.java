@@ -1,11 +1,9 @@
 package rbxapi.javablox.model.assetdelivery;
 
-import rbxapi.javablox.model.common.asset.AssetType;
-
 // TODO: Extend potential Asset class
 public class AssetRequest {
     private String assetName;
-    private AssetType assetType;
+    private String assetType;
     private boolean clientInsert;
     private long placeId;
     private String requestId;

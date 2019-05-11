@@ -1,4 +1,6 @@
 package rbxapi.javablox.model.common.asset;
 
-public enum AssetType {
+import rbxapi.javablox.model.common.serial.IdNamePair;
+
+public class AssetType extends IdNamePair {
 }

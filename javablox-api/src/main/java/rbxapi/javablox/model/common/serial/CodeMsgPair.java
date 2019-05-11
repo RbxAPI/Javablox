@@ -1,4 +1,4 @@
-package rbxapi.javablox.model.common;
+package rbxapi.javablox.model.common.serial;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,8 +1,8 @@
 package rbxapi.javablox.api.auth;
 
 import rbxapi.javablox.model.auth.*;
-import rbxapi.javablox.model.common.CodeMsgPair;
-import rbxapi.javablox.model.common.bool.Valid;
+import rbxapi.javablox.model.common.serial.CodeMsgPair;
+import rbxapi.javablox.model.common.serial.Boolean;
 import rbxapi.javablox.model.common.user.User;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -13,7 +13,7 @@ import retrofit2.http.Query;
 public interface Password {
 
     @GET("v2/passwords/current-status")
-    Call<Valid> isPasswordValid();
+    Call<Boolean> isPasswordValid();
 
     @GET("v2/passwords/reset")
     Call<User[]> getPasswordResetMetadata(@Query("request.targetType") TargetType targetType, @Query("request.ticket") String ticket);

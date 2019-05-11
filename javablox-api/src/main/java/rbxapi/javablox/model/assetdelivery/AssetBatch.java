@@ -1,6 +1,6 @@
 package rbxapi.javablox.model.assetdelivery;
 
-import rbxapi.javablox.model.common.CodeMsgPair;
+import rbxapi.javablox.model.common.serial.CodeMsgPair;
 
 public class AssetBatch {
     private String Location;
