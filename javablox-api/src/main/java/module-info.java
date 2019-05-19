@@ -20,6 +20,7 @@ module io.github.rbxapi.javablox.api {
     exports rbxapi.javablox.model.common.universe;
     exports rbxapi.javablox.model.billing;
     exports rbxapi.javablox.model.billing.xsolla;
+    exports rbxapi.javablox.model.captcha;
 
     exports rbxapi.javablox.api.auth;
     exports rbxapi.javablox.api.accountsettings;
@@ -27,4 +28,5 @@ module io.github.rbxapi.javablox.api {
     exports rbxapi.javablox.api.avatar;
     exports rbxapi.javablox.api.badges;
     exports rbxapi.javablox.api.billing;
+    exports rbxapi.javablox.api.captcha;
 }
