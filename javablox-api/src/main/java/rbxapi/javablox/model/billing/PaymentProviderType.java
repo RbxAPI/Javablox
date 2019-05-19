@@ -1,0 +1,30 @@
+package rbxapi.javablox.model.billing;
+
+public enum PaymentProviderType {
+    AppleAppStore,
+    Boku,
+    Check,
+    Credit,
+    PayPalCreditCard,
+    GooglePlayStore,
+    InComm,
+    Mail,
+    Paypal,
+    Rixty,
+    RixtyPin,
+    LiveGamer,
+    RobloxGiveaway,
+    AmazonStore,
+    XboxStore,
+    Wallie,
+    WindowsStore,
+    VantivToken,
+    XsollaOXXO,
+    XsollaBoleto,
+    XsollaSOFORT,
+    XsollaPaysafe,
+    XsollaCreditDebitCards,
+    MidasWeChatDesktop,
+    MidasWeChatAndroid,
+    MidasWeChatApple
+}

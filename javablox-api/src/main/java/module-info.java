@@ -18,10 +18,13 @@ module io.github.rbxapi.javablox.api {
     exports rbxapi.javablox.model.common.badge;
     exports rbxapi.javablox.model.badge;
     exports rbxapi.javablox.model.common.universe;
+    exports rbxapi.javablox.model.billing;
+    exports rbxapi.javablox.model.billing.xsolla;
 
     exports rbxapi.javablox.api.auth;
     exports rbxapi.javablox.api.accountsettings;
     exports rbxapi.javablox.api.assetdelivery;
     exports rbxapi.javablox.api.avatar;
     exports rbxapi.javablox.api.badges;
+    exports rbxapi.javablox.api.billing;
 }

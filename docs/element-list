@@ -5,11 +5,14 @@ rbxapi.javablox.api.assetdelivery
 rbxapi.javablox.api.auth
 rbxapi.javablox.api.avatar
 rbxapi.javablox.api.badges
+rbxapi.javablox.api.billing
 rbxapi.javablox.model.accountsettings
 rbxapi.javablox.model.assetdelivery
 rbxapi.javablox.model.auth
 rbxapi.javablox.model.avatar
 rbxapi.javablox.model.badge
+rbxapi.javablox.model.billing
+rbxapi.javablox.model.billing.xsolla
 rbxapi.javablox.model.common
 rbxapi.javablox.model.common.asset
 rbxapi.javablox.model.common.avatar
