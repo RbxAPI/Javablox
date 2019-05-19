@@ -7,6 +7,8 @@ rbxapi.javablox.api.avatar
 rbxapi.javablox.api.badges
 rbxapi.javablox.api.billing
 rbxapi.javablox.api.captcha
+rbxapi.javablox.api.catalog
+rbxapi.javablox.model
 rbxapi.javablox.model.accountsettings
 rbxapi.javablox.model.assetdelivery
 rbxapi.javablox.model.auth
@@ -15,10 +17,12 @@ rbxapi.javablox.model.badge
 rbxapi.javablox.model.billing
 rbxapi.javablox.model.billing.xsolla
 rbxapi.javablox.model.captcha
+rbxapi.javablox.model.catelog
 rbxapi.javablox.model.common
 rbxapi.javablox.model.common.asset
 rbxapi.javablox.model.common.avatar
 rbxapi.javablox.model.common.badge
+rbxapi.javablox.model.common.bundle
 rbxapi.javablox.model.common.email
 rbxapi.javablox.model.common.serial
 rbxapi.javablox.model.common.universe

@@ -1,7 +1,7 @@
 package rbxapi.javablox.model.billing;
 
-public class Payments {
-    private String previousPageCursor;
-    private String nextPageCursor;
-    private PaymentInfo[] data;
+import rbxapi.javablox.model.CursorResponse;
+
+public class Payments extends CursorResponse<PaymentInfo> {
+
 }

@@ -21,6 +21,9 @@ module io.github.rbxapi.javablox.api {
     exports rbxapi.javablox.model.billing;
     exports rbxapi.javablox.model.billing.xsolla;
     exports rbxapi.javablox.model.captcha;
+    exports rbxapi.javablox.model.catelog;
+    exports rbxapi.javablox.model.common.bundle;
+    exports rbxapi.javablox.model;
 
     exports rbxapi.javablox.api.auth;
     exports rbxapi.javablox.api.accountsettings;
@@ -29,4 +32,5 @@ module io.github.rbxapi.javablox.api {
     exports rbxapi.javablox.api.badges;
     exports rbxapi.javablox.api.billing;
     exports rbxapi.javablox.api.captcha;
+    exports rbxapi.javablox.api.catalog;
 }
