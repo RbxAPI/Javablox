@@ -61,6 +61,12 @@ public interface Chat {
     @POST("/v2/reset-conversation-universe")
     Call<StatusMessage> resetConversationUniverse(@Body ConversationId requestModel);
 
+    @POST("/v2/send-game-link-message")
+    Call<SendGameLinkMessageResponse> sendGameLinkMessage(@Body GameLinkRequest requestModel);
+
+    @POST("/v2/send-message")
+    Call<SendMessageResponse> sendMessage(@Body MessageRequest requestModel);
+
 
 
 }
