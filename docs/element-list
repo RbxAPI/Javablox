@@ -10,6 +10,7 @@ rbxapi.javablox.api.captcha
 rbxapi.javablox.api.catalog
 rbxapi.javablox.api.chat
 rbxapi.javablox.api.clientsettings
+rbxapi.javablox.api.contacts
 rbxapi.javablox.model
 rbxapi.javablox.model.accountsettings
 rbxapi.javablox.model.assetdelivery
@@ -35,3 +36,4 @@ rbxapi.javablox.model.common.place
 rbxapi.javablox.model.common.serial
 rbxapi.javablox.model.common.universe
 rbxapi.javablox.model.common.user
+rbxapi.javablox.model.contacts

@@ -30,6 +30,7 @@ module io.github.rbxapi.javablox.api {
     exports rbxapi.javablox.model.common.place;
     exports rbxapi.javablox.model.common.chat.party;
     exports rbxapi.javablox.model.clientsettings;
+    exports rbxapi.javablox.model.contacts;
 
     exports rbxapi.javablox.api.auth;
     exports rbxapi.javablox.api.accountsettings;
@@ -41,4 +42,5 @@ module io.github.rbxapi.javablox.api {
     exports rbxapi.javablox.api.catalog;
     exports rbxapi.javablox.api.chat;
     exports rbxapi.javablox.api.clientsettings;
+    exports rbxapi.javablox.api.contacts;
 }

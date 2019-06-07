@@ -6,6 +6,10 @@ plugins {
 
 version '1.0-SNAPSHOT'
 def globalgradleVersion = '5.4.1'
+def artifact_id = 'javablox'
+def artifact_name = 'Javablox'
+def artifact_desc = 'Complete artifact for Javablox'
+
 
 allprojects {
     group 'io.github.rbxapi'
@@ -24,32 +28,10 @@ allprojects {
         archiveClassifier.set("javadoc")
         from javadoc.destinationDir
     }
-
-    publishing {
-        repositories {
-            maven {
-                credentials {
-                    username "$mavenUser"
-                    password "$mavenPassword"
-                }
-                def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
-                def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
-                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
-            }
-        }
-    }
     
     afterEvaluate {
         signing {
             sign publishing.publications.mavenJava
-        }
-    }
-}
-
-subprojects {
-    afterEvaluate {
-        repositories {
-            mavenCentral()
         }
 
         javadoc {
@@ -57,6 +39,16 @@ subprojects {
             options.addStringOption('-module-path', classpath.asPath)
             options.tags = [ "implNote" ]
         }
+    }
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    afterEvaluate {
+
         compileJava {
             inputs.property("moduleName", moduleName)
             doFirst {
@@ -128,6 +120,17 @@ publishing {
                     url = 'http://github.com/RbxAPI/Javablox/'
                 }
             }
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username "$mavenUser"
+                password "$mavenPassword"
+            }
+            def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+            def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
         }
     }
 }
