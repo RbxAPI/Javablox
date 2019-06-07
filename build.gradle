@@ -4,35 +4,59 @@ plugins {
     id 'signing'
 }
 
-group 'io.github.rbxapi'
 version '1.0-SNAPSHOT'
-sourceCompatibility = 1.11
 def globalgradleVersion = '5.4.1'
 
-repositories {
-    mavenCentral()
-}
+allprojects {
+    group 'io.github.rbxapi'
+    sourceCompatibility = 1.11
 
-task sourcesJar(type: Jar, dependsOn: classes) {
-    classifier = 'sources'
-    from sourceSets.main.allSource
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-subprojects {
     wrapper{
         gradleVersion = globalgradleVersion
         distributionType = Wrapper.DistributionType.BIN
     }
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        archiveClassifier.set("sources")
+        from sourceSets.main.allSource
+    }
+
+    task javadocJar(type: Jar, dependsOn: javadoc) {
+        archiveClassifier.set("javadoc")
+        from javadoc.destinationDir
+    }
+
+    publishing {
+        repositories {
+            maven {
+                credentials {
+                    username "$mavenUser"
+                    password "$mavenPassword"
+                }
+                def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+                def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
+                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            }
+        }
+    }
+    
+    afterEvaluate {
+        signing {
+            sign publishing.publications.mavenJava
+        }
+    }
+}
+
+subprojects {
     afterEvaluate {
         repositories {
             mavenCentral()
         }
 
+        javadoc {
+            options.addBooleanOption('html5', true)
+            options.addStringOption('-module-path', classpath.asPath)
+            options.tags = [ "implNote" ]
+        }
         compileJava {
             inputs.property("moduleName", moduleName)
             doFirst {
@@ -72,22 +96,6 @@ subprojects {
                 events "passed", "skipped", "failed"
             }
         }
-        javadoc {
-            options.addBooleanOption('html5', true)
-            options.addStringOption('-module-path', classpath.asPath)
-            options.tags = [ "implNote" ]
-        }
-    }
-}
-
-wrapper{
-    gradleVersion = globalgradleVersion
-    distributionType = Wrapper.DistributionType.BIN
-}
-
-repositories {
-    maven {
-        url 'https://oss.sonatype.org/content/groups/public'
     }
 }
 
@@ -122,26 +130,4 @@ publishing {
             }
         }
     }
-    repositories {
-        maven {
-            credentials {
-                username "$mavenUser"
-                password "$mavenPassword"
-            }
-            def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
-            def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
-            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
-        }
-    }
-}
-
-signing {
-    sign publishing.publications.mavenJava
-}
-
-
-javadoc {
-    options.addBooleanOption('html5', true)
-    options.addStringOption('-module-path', classpath.asPath)
-    options.tags = [ "implNote" ]
 }

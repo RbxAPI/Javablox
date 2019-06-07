@@ -1,0 +1,1 @@
+moduleSearchIndex = [{"l":"io.github.rbxapi.javablox.api"}]

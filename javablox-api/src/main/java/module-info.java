@@ -27,6 +27,8 @@ module io.github.rbxapi.javablox.api {
     exports rbxapi.javablox.model.common.mesh;
     exports rbxapi.javablox.model.chat;
     exports rbxapi.javablox.model.common.chat;
+    exports rbxapi.javablox.model.common.place;
+    exports rbxapi.javablox.model.common.chat.party;
 
     exports rbxapi.javablox.api.auth;
     exports rbxapi.javablox.api.accountsettings;

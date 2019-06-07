@@ -1,7 +1,5 @@
 package rbxapi.javablox.model.chat;
 
-public class GameLinkRequest {
-    private int universeId;
-    private int conversationId;
+public class GameLinkRequest extends ConversationUniverseRequest {
     private String[] decorators;
 }

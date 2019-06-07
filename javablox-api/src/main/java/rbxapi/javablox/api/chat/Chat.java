@@ -3,7 +3,9 @@ package rbxapi.javablox.api.chat;
 import rbxapi.javablox.model.chat.*;
 import rbxapi.javablox.model.common.chat.Conversation;
 import rbxapi.javablox.model.common.chat.Message;
+import rbxapi.javablox.model.common.place.PlaceID;
 import rbxapi.javablox.model.common.serial.Count;
+import rbxapi.javablox.model.common.serial.StatusMessage;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -44,7 +46,7 @@ public interface Chat {
     Call<MessageResponse> getMultiLatestMessages(@Query("conversationIds") long[] ids, @Query("pageSize") int size);
 
     @POST("/v2/add-to-conversation")
-    Call<AddConversationResponse> addToConversation(@Body ParticipantsConversationRequest requestModel);
+    Call<StartNewConversationResponse> addToConversation(@Body ParticipantsConversationRequest requestModel);
 
     @POST("/v2/mark-as-read")
     Call<MarkAsResponse> markAsRead(@Body ConversationEndMessageRequest requestModel);
@@ -67,6 +69,18 @@ public interface Chat {
     @POST("/v2/send-message")
     Call<SendMessageResponse> sendMessage(@Body MessageRequest requestModel);
 
+    @POST("/v2/set-conversation-universe")
+    Call<StatusMessage> setConversationUniverse(@Body ConversationUniverseRequest requestModel);
 
+    @POST("/v2/start-cloud-edit-conversation")
+    Call<StartNewConversationResponse> startCloudEditConversation(@Body PlaceID requestModel);
 
+    @POST("/v2/start-group-conversation")
+    Call<StartNewConversationResponse> startGroupConversation(@Body ParticipantsConversationRequest requestModel);
+
+    @POST("/v2/start-one-to-one-conversation")
+    Call<StartNewConversationResponse> startOneToOneConversation(@Body ParticipantUserID requestModel);
+
+    @POST("/v2/update-user-typing-status")
+    Call<StatusMessage> setTypingStatus(@Body TypingRequest requestModel);
 }
