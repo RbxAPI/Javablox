@@ -1,7 +1,7 @@
 package rbxapi.javablox.model.common.badge;
 
 import rbxapi.javablox.model.common.serial.IdNamePair;
-import rbxapi.javablox.model.common.universe.Universe;
+import rbxapi.javablox.model.badge.BadgeAwardUniverse;
 
 public class Badge extends IdNamePair {
     private String description;
@@ -10,5 +10,5 @@ public class Badge extends IdNamePair {
     private String created;
     private String updated;
     private Statistic statistics;
-    private Universe awardingUniverse;
+    private BadgeAwardUniverse awardingUniverse;
 }

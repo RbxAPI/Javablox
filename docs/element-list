@@ -11,6 +11,7 @@ rbxapi.javablox.api.catalog
 rbxapi.javablox.api.chat
 rbxapi.javablox.api.clientsettings
 rbxapi.javablox.api.contacts
+rbxapi.javablox.api.develop
 rbxapi.javablox.model
 rbxapi.javablox.model.accountsettings
 rbxapi.javablox.model.assetdelivery

@@ -43,4 +43,5 @@ module io.github.rbxapi.javablox.api {
     exports rbxapi.javablox.api.chat;
     exports rbxapi.javablox.api.clientsettings;
     exports rbxapi.javablox.api.contacts;
+    exports rbxapi.javablox.api.develop;
 }
