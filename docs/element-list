@@ -9,6 +9,7 @@ rbxapi.javablox.api.billing
 rbxapi.javablox.api.captcha
 rbxapi.javablox.api.catalog
 rbxapi.javablox.api.chat
+rbxapi.javablox.api.clientsettings
 rbxapi.javablox.model
 rbxapi.javablox.model.accountsettings
 rbxapi.javablox.model.assetdelivery
@@ -20,14 +21,17 @@ rbxapi.javablox.model.billing.xsolla
 rbxapi.javablox.model.captcha
 rbxapi.javablox.model.catelog
 rbxapi.javablox.model.chat
+rbxapi.javablox.model.clientsettings
 rbxapi.javablox.model.common
 rbxapi.javablox.model.common.asset
 rbxapi.javablox.model.common.avatar
 rbxapi.javablox.model.common.badge
 rbxapi.javablox.model.common.bundle
 rbxapi.javablox.model.common.chat
+rbxapi.javablox.model.common.chat.party
 rbxapi.javablox.model.common.email
 rbxapi.javablox.model.common.mesh
+rbxapi.javablox.model.common.place
 rbxapi.javablox.model.common.serial
 rbxapi.javablox.model.common.universe
 rbxapi.javablox.model.common.user
