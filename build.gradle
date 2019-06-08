@@ -6,9 +6,6 @@ plugins {
 
 version '1.0-SNAPSHOT'
 def globalgradleVersion = '5.4.1'
-def artifact_id = 'javablox'
-def artifact_name = 'Javablox'
-def artifact_desc = 'Complete artifact for Javablox'
 
 
 allprojects {
@@ -28,16 +25,16 @@ allprojects {
         archiveClassifier.set("javadoc")
         from javadoc.destinationDir
     }
+
+    javadoc {
+        options.addBooleanOption('html5', true)
+        options.addStringOption('-module-path', classpath.asPath)
+        options.tags = [ "implNote" ]
+    }
     
     afterEvaluate {
         signing {
             sign publishing.publications.mavenJava
-        }
-
-        javadoc {
-            options.addBooleanOption('html5', true)
-            options.addStringOption('-module-path', classpath.asPath)
-            options.tags = [ "implNote" ]
         }
     }
 }

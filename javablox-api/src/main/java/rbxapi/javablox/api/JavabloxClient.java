@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * The base class to easily utilise the lib
  */
-public class Javablox {
+public class JavabloxClient {
 
     /**
      * Applies the JSON header by default

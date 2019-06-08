@@ -21,3 +21,14 @@ Uses `call.enqueue` to get response (includes 4xx Status Code). When error, pars
 
 ## 4. Future events
 `Future<void> onLoginSuccesful`
+
+# New models
+* User
+  * Authenticated User
+* Place
+* Universe
+* Avatar
+* Asset
+* Badge
+* Conversation
+  * Party

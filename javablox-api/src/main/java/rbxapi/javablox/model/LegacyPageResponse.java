@@ -1,6 +1,5 @@
 package rbxapi.javablox.model;
 
-public class LegacyPageResponse<T> {
-    private T[] data;
+public class LegacyPageResponse<T> extends ApiArrayResponse<T>{
     private int total;
 }
