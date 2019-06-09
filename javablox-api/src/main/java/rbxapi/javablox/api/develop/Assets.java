@@ -1,6 +1,6 @@
 package rbxapi.javablox.api.develop;
 
-import rbxapi.javablox.model.ApiArrayResponse;
+import rbxapi.javablox.model.common.ApiArrayResponse;
 import rbxapi.javablox.model.develop.AssetVoting;
 import retrofit2.Call;
 import retrofit2.http.GET;

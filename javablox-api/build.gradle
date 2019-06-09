@@ -8,7 +8,7 @@ version '1.0-SNAPSHOT'
 ext.moduleName = 'io.github.rbxapi.javablox.api'
 
 dependencies {
-    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
 }
 
 publishing {

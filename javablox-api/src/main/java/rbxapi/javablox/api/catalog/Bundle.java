@@ -1,6 +1,6 @@
 package rbxapi.javablox.api.catalog;
 
-import rbxapi.javablox.model.CursorResponse;
+import rbxapi.javablox.model.common.CursorResponse;
 import rbxapi.javablox.model.common.SortOrder;
 import retrofit2.Call;
 import retrofit2.http.GET;

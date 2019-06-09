@@ -1,6 +1,6 @@
 package rbxapi.javablox.api.catalog;
 
-import rbxapi.javablox.model.LegacyPageResponse;
+import rbxapi.javablox.model.common.LegacyPageResponse;
 import rbxapi.javablox.model.catelog.AppStoreType;
 import rbxapi.javablox.model.common.bundle.BundleProduct;
 import retrofit2.Call;
