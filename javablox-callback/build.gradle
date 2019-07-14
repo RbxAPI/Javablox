@@ -5,22 +5,22 @@ plugins {
 }
 
 version '1.0-SNAPSHOT'
-ext.moduleName = 'rbxapi.javablox.api'
+ext.moduleName = 'rbxapi.javablox.callback'
 
 dependencies {
-    api 'com.squareup.retrofit2:converter-gson:2.6.0'
+    api project(':javablox-api')
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'javablox-api'
+            artifactId = 'javablox-callback'
             from components.java
             artifact sourcesJar
             artifact javadocJar
             pom {
-                name = 'Javablox API'
-                description = 'API interfaces for Javablox'
+                name = 'Javablox Callback'
+                description = 'Implementation of Javablox that uses Retrofit Callback'
                 url = 'https://github.com/rbxapi/javablox'
                 licenses {
                     license {

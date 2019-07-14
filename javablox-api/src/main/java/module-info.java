@@ -1,50 +1,15 @@
-open module io.github.rbxapi.javablox.api {
-    requires okhttp3;
-    requires retrofit2;
+/**
+ * Retrofit call declaration
+ */
+open module rbxapi.javablox.api {
     requires retrofit2.converter.gson;
+    requires retrofit2;
     requires java.sql;
-    requires gson;
+    requires okhttp3;
 
-    exports rbxapi.javablox.model.common;
-    exports rbxapi.javablox.model.accountsettings;
-    exports rbxapi.javablox.model.assetdelivery;
-    exports rbxapi.javablox.model.common.email;
-    exports rbxapi.javablox.model.common.serial;
-    exports rbxapi.javablox.model.common.asset;
-    exports rbxapi.javablox.model.avatar;
-    exports rbxapi.javablox.model.common.avatar;
-    exports rbxapi.javablox.model.auth;
-    exports rbxapi.javablox.model.common.user;
-    exports rbxapi.javablox.model.common.badge;
-    exports rbxapi.javablox.model.badge;
-    exports rbxapi.javablox.model.common.universe;
-    exports rbxapi.javablox.model.billing;
-    exports rbxapi.javablox.model.billing.xsolla;
-    exports rbxapi.javablox.model.captcha;
-    exports rbxapi.javablox.model.catelog;
-    exports rbxapi.javablox.model.common.bundle;
-    exports rbxapi.javablox.model;
-    exports rbxapi.javablox.model.common.mesh;
-    exports rbxapi.javablox.model.chat;
-    exports rbxapi.javablox.model.common.chat;
-    exports rbxapi.javablox.model.common.place;
-    exports rbxapi.javablox.model.common.chat.party;
-    exports rbxapi.javablox.model.clientsettings;
-    exports rbxapi.javablox.model.contacts;
-    exports rbxapi.javablox.model.economy;
-    exports rbxapi.javablox.model.develop;
-
-    exports rbxapi.javablox.api.auth;
-    exports rbxapi.javablox.api.accountsettings;
-    exports rbxapi.javablox.api.assetdelivery;
-    exports rbxapi.javablox.api.avatar;
-    exports rbxapi.javablox.api.badges;
-    exports rbxapi.javablox.api.billing;
-    exports rbxapi.javablox.api.captcha;
-    exports rbxapi.javablox.api.catalog;
-    exports rbxapi.javablox.api.chat;
-    exports rbxapi.javablox.api.clientsettings;
-    exports rbxapi.javablox.api.contacts;
-    exports rbxapi.javablox.api.develop;
-    exports rbxapi.javablox.api.economy;
+    exports rbxapi.javablox.api;
+    exports rbxapi.javablox.api.user.account;
+    exports rbxapi.javablox.api.user.account.info;
+    exports rbxapi.javablox.client;
+    exports rbxapi.javablox.svc;
 }

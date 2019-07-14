@@ -5,22 +5,22 @@ plugins {
 }
 
 version '1.0-SNAPSHOT'
-ext.moduleName = 'rbxapi.javablox.api'
+ext.moduleName = 'rbxapi.javablox.future'
 
 dependencies {
-    api 'com.squareup.retrofit2:converter-gson:2.6.0'
+    api project(':javablox-api')
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'javablox-api'
+            artifactId = 'javablox-future'
             from components.java
             artifact sourcesJar
             artifact javadocJar
             pom {
-                name = 'Javablox API'
-                description = 'API interfaces for Javablox'
+                name = 'Javablox Future'
+                description = "Implementation of Javablox that uses Java's built-in Future"
                 url = 'https://github.com/rbxapi/javablox'
                 licenses {
                     license {
