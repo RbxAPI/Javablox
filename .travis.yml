@@ -1,6 +1,10 @@
 language: java
 install: true
-dist: xenial
+dist: bionic
+jdk:
+  - oraclejdk11
+  - oraclejdk12
+
 script:
 - "./gradlew test -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF
   -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
@@ -16,7 +20,6 @@ before_install:
 - chmod +x deploy.sh
 - "./gradlew wrapper -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF
   -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
-jdk: oraclejdk11
 after_success:
 - echo $sslkey | gpg --passphrase-fd 0 secrets.tar.gpg
 - tar xvf secrets.tar

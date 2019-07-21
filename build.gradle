@@ -11,6 +11,7 @@ def globalgradleVersion = '5.5'
 allprojects {
     group 'io.github.rbxapi'
     sourceCompatibility = 1.11
+    targetCompatibility = 1.11
 
     wrapper{
         gradleVersion = globalgradleVersion

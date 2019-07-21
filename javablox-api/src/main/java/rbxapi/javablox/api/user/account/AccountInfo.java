@@ -1,11 +1,11 @@
 package rbxapi.javablox.api.user.account;
 
 import rbxapi.javablox.api.user.account.info.Birthdate;
-import retrofit2.Callback;
+import rbxapi.javablox.client.JavabloxCallback;
 
 public interface AccountInfo {
 
-    void getBirthdate(Callback<Birthdate> callback);
+    void getBirthdate(JavabloxCallback<Birthdate> callback);
 
-    void updateBirthdate(Birthdate birthdate, Callback<Void> callback);
+    void updateBirthdate(Birthdate birthdate, JavabloxCallback<Void> callback);
 }
