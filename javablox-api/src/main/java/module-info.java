@@ -11,7 +11,8 @@ open module rbxapi.javablox.api {
     exports rbxapi.javablox.api;
     exports rbxapi.javablox.api.user.account;
     exports rbxapi.javablox.api.user.account.info;
-    exports rbxapi.javablox.client;
     exports rbxapi.javablox.svc;
+    exports rbxapi.javablox.model;
     exports rbxapi.javablox.exception;
+    exports rbxapi.javablox.client;
 }
