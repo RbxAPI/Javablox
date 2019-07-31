@@ -1,16 +1,14 @@
 package rbxapi.javablox.model;
 
-import rbxapi.javablox.exception.BaseJavabloxException;
-
 public class ErrorResponse {
-    private BaseJavabloxException[] errors;
+    private JavabloxException[] errors;
 
     private ErrorResponse() {}
 
     public static class Builder {
-        private BaseJavabloxException[] errors;
+        private JavabloxException[] errors;
 
-        public Builder setErrors(BaseJavabloxException[] errors) {
+        public Builder setErrors(JavabloxException[] errors) {
             this.errors = errors;
             return this;
         }
@@ -22,7 +20,7 @@ public class ErrorResponse {
         }
     }
 
-    public BaseJavabloxException[] getErrors() {
+    public JavabloxException[] getErrors() {
         return errors;
     }
 }

@@ -1,7 +1,7 @@
 package rbxapi.javablox.client;
 
 import com.google.gson.Gson;
-import rbxapi.javablox.exception.BaseJavabloxException;
+import rbxapi.javablox.model.JavabloxException;
 import rbxapi.javablox.model.ErrorResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -10,15 +10,15 @@ import retrofit2.Response;
 import java.io.IOException;
 
 public abstract class CallbackAdapter<T, R> implements Callback<T> {
-    private JavabloxCallback<R> jcb;
+    private JavabloxResponseCallback<R> jcb;
 
-    public CallbackAdapter(JavabloxCallback<R> jcb) {
+    public CallbackAdapter(JavabloxResponseCallback<R> jcb) {
         this.jcb = jcb;
     }
 
     public abstract R convertResponse(T response);
 
-    public abstract void castEx(BaseJavabloxException[] ez, int status);
+    public abstract void onExceptions(JavabloxException[] ez, int status);
 
     @Override
     public void onResponse(Call<T> call, Response<T> response) {
@@ -26,9 +26,8 @@ public abstract class CallbackAdapter<T, R> implements Callback<T> {
             jcb.onSuccess(convertResponse(response.body()));
         } else {
             try {
-                BaseJavabloxException[] e = new Gson().fromJson(response.errorBody().string(), ErrorResponse.class).getErrors();
-                castEx(e, response.code());
-                jcb.onEndpointException(e);
+                JavabloxException[] e = new Gson().fromJson(response.errorBody().string(), ErrorResponse.class).getErrors();
+                onExceptions(e, response.code());
             } catch (IOException e) {
                 jcb.onError(e);
             }

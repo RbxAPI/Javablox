@@ -1,15 +1,15 @@
-package rbxapi.javablox.exception;
+package rbxapi.javablox.model;
 
-public class BaseJavabloxException extends Throwable{
+public class JavabloxException extends Throwable{
     private int code;
     private String message;
 
-    public BaseJavabloxException(int code, String msg) {
+    public JavabloxException(int code, String msg) {
         this.code = code;
         message = msg;
     }
 
-    public BaseJavabloxException(BaseJavabloxException e) {
+    public JavabloxException(JavabloxException e) {
         this.code = e.getCode();
         this.message = e.getMessage();
     }
