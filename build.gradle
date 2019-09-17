@@ -123,8 +123,10 @@ publishing {
     repositories {
         maven {
             credentials {
-                username "$mavenUser"
-                password "$mavenPassword"
+                username = project.hasProperty('mavenUser') ? project.properties['mavenUser'] : "mavenUser"
+                password = project.hasProperty('mavenPassword') ? project.properties['mavenPassword'] : "mavenPassword"
+                // username "$mavenUser"
+                // password "$mavenPassword"
             }
             def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
             def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
