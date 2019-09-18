@@ -5,7 +5,7 @@ jdk:
   - oraclejdk11
   - oraclejdk12
 script:
-- "./gradlew test --scan"
+- "./gradlew test --scan -s"
 - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
 - chmod +x send.sh
 before_cache:
