@@ -10,6 +10,8 @@ import java.text.MessageFormat;
 public class JavabloxClient {
     private static OkHttpClient okHttpClient;
     private AccountInfoService accountInfo;
+
+    // Non authentic client, can be used for any calls
     private static JavabloxClient instance = new JavabloxClient("");
 
     public static JavabloxClient getInstance() {
@@ -25,6 +27,10 @@ public class JavabloxClient {
         return retrofit.create(api);
     }
 
+    /**
+     * Creates a client.
+     * @param cookie The cookie for authentication. If it's empty, the client isn't authenticated, but still can be used.
+     */
     public JavabloxClient(String cookie) {
         okHttpClient = new OkHttpClient().newBuilder().cookieJar(new JavabloxCookieJar(cookie)).build();
         this.accountInfo = build("accountinformation", AccountInfoService.class);

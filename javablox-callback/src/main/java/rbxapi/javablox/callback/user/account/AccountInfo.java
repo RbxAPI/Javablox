@@ -7,12 +7,18 @@ import rbxapi.javablox.client.JavabloxResponseCallback;
 import rbxapi.javablox.model.Description;
 import rbxapi.javablox.model.Gender;
 import rbxapi.javablox.model.JavabloxException;
+import rbxapi.javablox.svc.AccountInfoService;
 
 public class AccountInfo implements rbxapi.javablox.api.user.account.AccountInfo {
+    private AccountInfoService svc;
+
+    public AccountInfo(AccountInfoService svc) {
+        this.svc = svc;
+    }
 
     @Override
     public void getBirthdate(JavabloxResponseCallback<Birthdate> callback) {
-        JavabloxClient.getInstance().accountInfo().getBirthdate().enqueue(new CallbackAdapter<>(callback) {
+        svc.getBirthdate().enqueue(new CallbackAdapter<>(callback) {
             @Override
             public Birthdate convertResponse(Birthdate response) {
                 return response;
@@ -27,7 +33,7 @@ public class AccountInfo implements rbxapi.javablox.api.user.account.AccountInfo
 
     @Override
     public void updateBirthdate(Birthdate birthdate, JavabloxResponseCallback<Void> callback) {
-        JavabloxClient.getInstance().accountInfo().updateBirthdate(birthdate).enqueue(new CallbackAdapter<>(callback) {
+        svc.updateBirthdate(birthdate).enqueue(new CallbackAdapter<>(callback) {
             @Override
             public Void convertResponse(Void response) {
                 return response;
@@ -57,7 +63,7 @@ public class AccountInfo implements rbxapi.javablox.api.user.account.AccountInfo
 
     @Override
     public void getDescription(JavabloxResponseCallback<String> callback) {
-        JavabloxClient.getInstance().accountInfo().getDescription().enqueue(new CallbackAdapter<>(callback) {
+        svc.getDescription().enqueue(new CallbackAdapter<>(callback) {
             @Override
             public String convertResponse(Description response) {
                 return response.getDescription();
@@ -74,7 +80,7 @@ public class AccountInfo implements rbxapi.javablox.api.user.account.AccountInfo
 
     @Override
     public void setDescription(String description, JavabloxResponseCallback<Void> callback) {
-        JavabloxClient.getInstance().accountInfo().setDescription(new Description(description)).enqueue(new CallbackAdapter<>(callback) {
+        svc.setDescription(new Description(description)).enqueue(new CallbackAdapter<>(callback) {
             @Override
             public Void convertResponse(Void response) {
                 return response;
@@ -103,7 +109,7 @@ public class AccountInfo implements rbxapi.javablox.api.user.account.AccountInfo
 
     @Override
     public void getGender(JavabloxResponseCallback<Gender> callback) {
-        JavabloxClient.getInstance().accountInfo().getGender().enqueue(new CallbackAdapter<>(callback) {
+        svc.getGender().enqueue(new CallbackAdapter<>(callback) {
             @Override
             public Gender convertResponse(Gender response) {
                 return response;
@@ -121,7 +127,7 @@ public class AccountInfo implements rbxapi.javablox.api.user.account.AccountInfo
 
     @Override
     public void setGender(Gender gender, JavabloxResponseCallback<Void> callback) {
-        JavabloxClient.getInstance().accountInfo().setGender(gender).enqueue(new CallbackAdapter<>(callback) {
+        svc.setGender(gender).enqueue(new CallbackAdapter<>(callback) {
             @Override
             public Void convertResponse(Void response) {
                 return response;

@@ -3,7 +3,7 @@ install: true
 dist: bionic
 jdk:
   - oraclejdk11
-  - oraclejdk12
+  - oraclejdk13
 
 script:
 - "./gradlew test -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF
@@ -21,7 +21,7 @@ before_install:
 - "./gradlew wrapper -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF
   -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
 after_success:
-- echo $sslkey | gpg --passphrase-fd 0 secrets.tar.gpg
+- echo $sslkey | gpg --batch --passphrase-fd 0 secrets.tar.gpg
 - tar xvf secrets.tar
 - "./deploy.sh"
 - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh

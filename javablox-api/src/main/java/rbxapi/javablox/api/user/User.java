@@ -1,4 +1,4 @@
 package rbxapi.javablox.api.user;
 
-public class User {
+public interface User {
 }
