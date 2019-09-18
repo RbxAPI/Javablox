@@ -3,7 +3,7 @@ install: true
 dist: bionic
 jdk:
   - oraclejdk11
-  - oraclejdk13
+  - oraclejdk12
 
 script:
 - "./gradlew test -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF

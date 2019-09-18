@@ -2,7 +2,6 @@ package rbxapi.javablox.callback.user.account;
 
 import rbxapi.javablox.api.user.account.info.Birthdate;
 import rbxapi.javablox.client.CallbackAdapter;
-import rbxapi.javablox.client.JavabloxClient;
 import rbxapi.javablox.client.JavabloxResponseCallback;
 import rbxapi.javablox.model.Description;
 import rbxapi.javablox.model.Gender;
