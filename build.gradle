@@ -5,16 +5,15 @@ plugins {
 }
 
 version '1.0-SNAPSHOT'
-def globalgradleVersion = '5.6.2'
-
 
 allprojects {
+
     group 'io.github.rbxapi'
-    sourceCompatibility = 1.11
-    targetCompatibility = 1.11
+    sourceCompatibility = 11
+    targetCompatibility = 11
 
     wrapper{
-        gradleVersion = globalgradleVersion
+        gradleVersion = '5.6.2'
         distributionType = Wrapper.DistributionType.BIN
     }
     task sourcesJar(type: Jar, dependsOn: classes) {
@@ -36,6 +35,12 @@ allprojects {
     afterEvaluate {
         signing {
             sign publishing.publications.mavenJava
+        }
+    }
+
+    tasks.withType(PublishToMavenRepository) {
+        onlyIf {
+            JavaVersion.current().java11
         }
     }
 }
@@ -125,8 +130,6 @@ publishing {
             credentials {
                 username = project.hasProperty('mavenUser') ? project.properties['mavenUser'] : "mavenUser"
                 password = project.hasProperty('mavenPassword') ? project.properties['mavenPassword'] : "mavenPassword"
-                // username "$mavenUser"
-                // password "$mavenPassword"
             }
             def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
             def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"

@@ -4,10 +4,10 @@ dist: bionic
 jdk:
   - oraclejdk11
   - oraclejdk12
-
 script:
-- "./gradlew test -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF
-  -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
+- "./gradlew test --scan"
+- wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
+- chmod +x send.sh
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -17,20 +17,14 @@ cache:
   - "$HOME/.gradle/wrapper/"
 before_install:
 - chmod +x gradlew
-- chmod +x deploy.sh
-- "./gradlew wrapper -PmavenUser=Travis -PmavenPassword=Stub -Psigning.keyId=A40AAFFF
-  -Psigning.password=Stub -Psigning.secretKeyRingFile=javablox.gpg"
 after_success:
 - echo $sslkey | gpg --batch --passphrase-fd 0 secrets.tar.gpg
 - tar xvf secrets.tar
+- chmod +x deploy.sh
 - "./deploy.sh"
-- wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
-- chmod +x send.sh
 - "./send.sh success $TCLRainbow"
 - "./send.sh success $Sanjay"
 after_failure:
-- wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
-- chmod +x send.sh
 - "./send.sh failure $TCLRainbow"
 - "./send.sh failure $Sanjay"
 env:
