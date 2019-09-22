@@ -1,4 +1,4 @@
-package rbxapi.javablox.model;
+package rbxapi.javablox.data;
 
 public class Description {
     private String description;

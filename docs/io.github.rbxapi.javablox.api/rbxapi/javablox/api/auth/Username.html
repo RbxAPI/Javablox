@@ -133,20 +133,20 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/auth/UsernamesResponse.html" title="class in rbxapi.javablox.model.auth">UsernamesResponse</a>&gt;</code></td>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/auth/UsernamesResponse.html" title="class in rbxapi.javablox.data.auth">UsernamesResponse</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUsernames(java.lang.String)">getUsernames</a></span>&#8203;(java.lang.String&nbsp;username)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/auth/TransmissionTypeResponse.html" title="class in rbxapi.javablox.model.auth">TransmissionTypeResponse</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sendRecover(rbxapi.javablox.model.auth.TargetRequest)">sendRecover</a></span>&#8203;(<a href="../../model/auth/TargetRequest.html" title="class in rbxapi.javablox.model.auth">TargetRequest</a>&nbsp;request)</code></th>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/auth/TransmissionTypeResponse.html" title="class in rbxapi.javablox.data.auth">TransmissionTypeResponse</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sendRecover(rbxapi.javablox.data.auth.TargetRequest)">sendRecover</a></span>&#8203;(<a href="../../model/auth/TargetRequest.html" title="class in rbxapi.javablox.data.auth">TargetRequest</a>&nbsp;request)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/auth/UsernameValidationResponse.html" title="class in rbxapi.javablox.model.auth">UsernameValidationResponse</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validateUsername(java.lang.String,java.lang.String,rbxapi.javablox.model.auth.UsernameValidationContext)">validateUsername</a></span>&#8203;(java.lang.String&nbsp;username,
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/auth/UsernameValidationResponse.html" title="class in rbxapi.javablox.data.auth">UsernameValidationResponse</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validateUsername(java.lang.String,java.lang.String,rbxapi.javablox.data.auth.UsernameValidationContext)">validateUsername</a></span>&#8203;(java.lang.String&nbsp;username,
                 java.lang.String&nbsp;birthday,
-                <a href="../../model/auth/UsernameValidationContext.html" title="enum in rbxapi.javablox.model.auth">UsernameValidationContext</a>&nbsp;context)</code></th>
+                <a href="../../model/auth/UsernameValidationContext.html" title="enum in rbxapi.javablox.data.auth">UsernameValidationContext</a>&nbsp;context)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -176,34 +176,34 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>getUsernames</h4>
 <pre class="methodSignature">@GET("v2/usernames")
-retrofit2.Call&lt;<a href="../../model/auth/UsernamesResponse.html" title="class in rbxapi.javablox.model.auth">UsernamesResponse</a>&gt;&nbsp;getUsernames&#8203;(@Query("username")
+retrofit2.Call&lt;<a href="../../model/auth/UsernamesResponse.html" title="class in rbxapi.javablox.data.auth">UsernamesResponse</a>&gt;&nbsp;getUsernames&#8203;(@Query("username")
                                                java.lang.String&nbsp;username)</pre>
 </li>
 </ul>
-<a id="validateUsername(java.lang.String,java.lang.String,rbxapi.javablox.model.auth.UsernameValidationContext)">
+<a id="validateUsername(java.lang.String,java.lang.String,rbxapi.javablox.data.auth.UsernameValidationContext)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>validateUsername</h4>
 <pre class="methodSignature">@GET("v2/usernames/validate")
-retrofit2.Call&lt;<a href="../../model/auth/UsernameValidationResponse.html" title="class in rbxapi.javablox.model.auth">UsernameValidationResponse</a>&gt;&nbsp;validateUsername&#8203;(@Query("request.username")
+retrofit2.Call&lt;<a href="../../model/auth/UsernameValidationResponse.html" title="class in rbxapi.javablox.data.auth">UsernameValidationResponse</a>&gt;&nbsp;validateUsername&#8203;(@Query("request.username")
                                                             java.lang.String&nbsp;username,
                                                             @Query("request.birthday")
                                                             java.lang.String&nbsp;birthday,
                                                             @Query("request.context")
-                                                            <a href="../../model/auth/UsernameValidationContext.html" title="enum in rbxapi.javablox.model.auth">UsernameValidationContext</a>&nbsp;context)</pre>
+                                                            <a href="../../model/auth/UsernameValidationContext.html" title="enum in rbxapi.javablox.data.auth">UsernameValidationContext</a>&nbsp;context)</pre>
 </li>
 </ul>
-<a id="sendRecover(rbxapi.javablox.model.auth.TargetRequest)">
+<a id="sendRecover(rbxapi.javablox.data.auth.TargetRequest)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>sendRecover</h4>
 <pre class="methodSignature">@POST("v2/usernames/recover")
-retrofit2.Call&lt;<a href="../../model/auth/TransmissionTypeResponse.html" title="class in rbxapi.javablox.model.auth">TransmissionTypeResponse</a>&gt;&nbsp;sendRecover&#8203;(@Body
-                                                     <a href="../../model/auth/TargetRequest.html" title="class in rbxapi.javablox.model.auth">TargetRequest</a>&nbsp;request)</pre>
+retrofit2.Call&lt;<a href="../../model/auth/TransmissionTypeResponse.html" title="class in rbxapi.javablox.data.auth">TransmissionTypeResponse</a>&gt;&nbsp;sendRecover&#8203;(@Body
+                                                     <a href="../../model/auth/TargetRequest.html" title="class in rbxapi.javablox.data.auth">TargetRequest</a>&nbsp;request)</pre>
 </li>
 </ul>
 </li>

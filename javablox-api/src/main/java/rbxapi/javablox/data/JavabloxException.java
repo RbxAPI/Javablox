@@ -1,4 +1,4 @@
-package rbxapi.javablox.model;
+package rbxapi.javablox.data;
 
 public class JavabloxException extends Throwable{
     private int code;

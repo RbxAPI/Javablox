@@ -1,4 +1,4 @@
-package rbxapi.javablox.api.user.account.info;
+package rbxapi.javablox.api.user.account;
 
 public class Birthdate {
     private int birthMonth;

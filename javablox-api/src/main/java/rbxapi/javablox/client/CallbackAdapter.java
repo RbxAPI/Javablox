@@ -1,8 +1,8 @@
 package rbxapi.javablox.client;
 
 import com.google.gson.Gson;
-import rbxapi.javablox.model.JavabloxException;
-import rbxapi.javablox.model.ErrorResponse;
+import rbxapi.javablox.data.JavabloxException;
+import rbxapi.javablox.data.ErrorResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

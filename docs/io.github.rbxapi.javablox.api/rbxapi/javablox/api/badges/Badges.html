@@ -133,30 +133,30 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/common/badge/Badge.html" title="class in rbxapi.javablox.model.common.badge">Badge</a>&gt;</code></td>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/common/badge/Badge.html" title="class in rbxapi.javablox.data.common.badge">Badge</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBadge(long)">getBadge</a></span>&#8203;(long&nbsp;badgeId)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/badge/BadgesResponse.html" title="class in rbxapi.javablox.model.badge">BadgesResponse</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUniverseBadges(long,rbxapi.javablox.model.common.SortOrder,int,java.lang.String)">getUniverseBadges</a></span>&#8203;(long&nbsp;universeId,
-                 <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.model.common">SortOrder</a>&nbsp;sortOrder,
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/badge/BadgesResponse.html" title="class in rbxapi.javablox.data.badge">BadgesResponse</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUniverseBadges(long,rbxapi.javablox.data.common.SortOrder,int,java.lang.String)">getUniverseBadges</a></span>&#8203;(long&nbsp;universeId,
+                 <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.data.common">SortOrder</a>&nbsp;sortOrder,
                  int&nbsp;limit,
                  java.lang.String&nbsp;cursor)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/badge/BadgesResponse.html" title="class in rbxapi.javablox.model.badge">BadgesResponse</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserBadges(long,rbxapi.javablox.model.common.SortOrder,int,java.lang.String)">getUserBadges</a></span>&#8203;(long&nbsp;userId,
-             <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.model.common">SortOrder</a>&nbsp;sortOrder,
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/badge/BadgesResponse.html" title="class in rbxapi.javablox.data.badge">BadgesResponse</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserBadges(long,rbxapi.javablox.data.common.SortOrder,int,java.lang.String)">getUserBadges</a></span>&#8203;(long&nbsp;userId,
+             <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.data.common">SortOrder</a>&nbsp;sortOrder,
              int&nbsp;limit,
              java.lang.String&nbsp;cursor)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>retrofit2.Call</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#update(long,rbxapi.javablox.model.badge.UpdateBadgeRequest)">update</a></span>&#8203;(long&nbsp;badgeId,
-      <a href="../../model/badge/UpdateBadgeRequest.html" title="class in rbxapi.javablox.model.badge">UpdateBadgeRequest</a>&nbsp;request)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#update(long,rbxapi.javablox.data.badge.UpdateBadgeRequest)">update</a></span>&#8203;(long&nbsp;badgeId,
+      <a href="../../model/badge/UpdateBadgeRequest.html" title="class in rbxapi.javablox.data.badge">UpdateBadgeRequest</a>&nbsp;request)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -186,11 +186,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>getBadge</h4>
 <pre class="methodSignature">@GET("v1/badges/{badgeId}")
-retrofit2.Call&lt;<a href="../../model/common/badge/Badge.html" title="class in rbxapi.javablox.model.common.badge">Badge</a>&gt;&nbsp;getBadge&#8203;(@Path("badgeId")
+retrofit2.Call&lt;<a href="../../model/common/badge/Badge.html" title="class in rbxapi.javablox.data.common.badge">Badge</a>&gt;&nbsp;getBadge&#8203;(@Path("badgeId")
                                long&nbsp;badgeId)</pre>
 </li>
 </ul>
-<a id="update(long,rbxapi.javablox.model.badge.UpdateBadgeRequest)">
+<a id="update(long,rbxapi.javablox.data.badge.UpdateBadgeRequest)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -200,37 +200,37 @@ retrofit2.Call&lt;<a href="../../model/common/badge/Badge.html" title="class in 
 retrofit2.Call&nbsp;update&#8203;(@Path("badgeId")
                       long&nbsp;badgeId,
                       @Body
-                      <a href="../../model/badge/UpdateBadgeRequest.html" title="class in rbxapi.javablox.model.badge">UpdateBadgeRequest</a>&nbsp;request)</pre>
+                      <a href="../../model/badge/UpdateBadgeRequest.html" title="class in rbxapi.javablox.data.badge">UpdateBadgeRequest</a>&nbsp;request)</pre>
 </li>
 </ul>
-<a id="getUniverseBadges(long,rbxapi.javablox.model.common.SortOrder,int,java.lang.String)">
+<a id="getUniverseBadges(long,rbxapi.javablox.data.common.SortOrder,int,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getUniverseBadges</h4>
 <pre class="methodSignature">@GET("v1/universes/{universeId}/badges")
-retrofit2.Call&lt;<a href="../../model/badge/BadgesResponse.html" title="class in rbxapi.javablox.model.badge">BadgesResponse</a>&gt;&nbsp;getUniverseBadges&#8203;(@Path("universeId")
+retrofit2.Call&lt;<a href="../../model/badge/BadgesResponse.html" title="class in rbxapi.javablox.data.badge">BadgesResponse</a>&gt;&nbsp;getUniverseBadges&#8203;(@Path("universeId")
                                                  long&nbsp;universeId,
                                                  @Query("sortOrder")
-                                                 <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.model.common">SortOrder</a>&nbsp;sortOrder,
+                                                 <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.data.common">SortOrder</a>&nbsp;sortOrder,
                                                  @Query("limit")
                                                  int&nbsp;limit,
                                                  @Query("cursor")
                                                  java.lang.String&nbsp;cursor)</pre>
 </li>
 </ul>
-<a id="getUserBadges(long,rbxapi.javablox.model.common.SortOrder,int,java.lang.String)">
+<a id="getUserBadges(long,rbxapi.javablox.data.common.SortOrder,int,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getUserBadges</h4>
 <pre class="methodSignature">@GET("v1/users/{userId}/badges")
-retrofit2.Call&lt;<a href="../../model/badge/BadgesResponse.html" title="class in rbxapi.javablox.model.badge">BadgesResponse</a>&gt;&nbsp;getUserBadges&#8203;(@Path("userId")
+retrofit2.Call&lt;<a href="../../model/badge/BadgesResponse.html" title="class in rbxapi.javablox.data.badge">BadgesResponse</a>&gt;&nbsp;getUserBadges&#8203;(@Path("userId")
                                              long&nbsp;userId,
                                              @Query("sortOrder")
-                                             <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.model.common">SortOrder</a>&nbsp;sortOrder,
+                                             <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.data.common">SortOrder</a>&nbsp;sortOrder,
                                              @Query("limit")
                                              int&nbsp;limit,
                                              @Query("cursor")

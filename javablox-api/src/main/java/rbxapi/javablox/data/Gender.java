@@ -1,4 +1,4 @@
-package rbxapi.javablox.model;
+package rbxapi.javablox.data;
 
 import com.google.gson.annotations.SerializedName;
 

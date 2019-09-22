@@ -133,28 +133,28 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class in rbxapi.javablox.model.common.serial">Boolean</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(rbxapi.javablox.model.avatar.OutfitUpdateModel)">create</a></span>&#8203;(<a href="../../model/avatar/OutfitUpdateModel.html" title="class in rbxapi.javablox.model.avatar">OutfitUpdateModel</a>&nbsp;outfitUpdateModel)</code></th>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class in rbxapi.javablox.data.common.serial">Boolean</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(rbxapi.javablox.data.avatar.OutfitUpdateModel)">create</a></span>&#8203;(<a href="../../model/avatar/OutfitUpdateModel.html" title="class in rbxapi.javablox.data.avatar">OutfitUpdateModel</a>&nbsp;outfitUpdateModel)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class in rbxapi.javablox.model.common.serial">Boolean</a>&gt;</code></td>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class in rbxapi.javablox.data.common.serial">Boolean</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#delete(long)">delete</a></span>&#8203;(long&nbsp;userOutfitId)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/common/avatar/Outfit.html" title="class in rbxapi.javablox.model.common.avatar">Outfit</a>&gt;</code></td>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/common/avatar/Outfit.html" title="class in rbxapi.javablox.data.common.avatar">Outfit</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOutfit(long)">getOutfit</a></span>&#8203;(long&nbsp;userOutfitId)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class in rbxapi.javablox.model.common.serial">Boolean</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#update(long,rbxapi.javablox.model.avatar.OutfitUpdateModel)">update</a></span>&#8203;(long&nbsp;userOutfitId,
-      <a href="../../model/avatar/OutfitUpdateModel.html" title="class in rbxapi.javablox.model.avatar">OutfitUpdateModel</a>&nbsp;outfitUpdateModel)</code></th>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class in rbxapi.javablox.data.common.serial">Boolean</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#update(long,rbxapi.javablox.data.avatar.OutfitUpdateModel)">update</a></span>&#8203;(long&nbsp;userOutfitId,
+      <a href="../../model/avatar/OutfitUpdateModel.html" title="class in rbxapi.javablox.data.avatar">OutfitUpdateModel</a>&nbsp;outfitUpdateModel)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i4">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/avatar/WearAssetsResponse.html" title="class in rbxapi.javablox.model.avatar">WearAssetsResponse</a>&gt;</code></td>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/avatar/WearAssetsResponse.html" title="class in rbxapi.javablox.data.avatar">WearAssetsResponse</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#wear(long)">wear</a></span>&#8203;(long&nbsp;userOutfitId)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -185,7 +185,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>getOutfit</h4>
 <pre class="methodSignature">@GET("v1/outfits/{userOutfitId}/details")
-retrofit2.Call&lt;<a href="../../model/common/avatar/Outfit.html" title="class in rbxapi.javablox.model.common.avatar">Outfit</a>&gt;&nbsp;getOutfit&#8203;(@Path("userOutfitId")
+retrofit2.Call&lt;<a href="../../model/common/avatar/Outfit.html" title="class in rbxapi.javablox.data.common.avatar">Outfit</a>&gt;&nbsp;getOutfit&#8203;(@Path("userOutfitId")
                                  long&nbsp;userOutfitId)</pre>
 </li>
 </ul>
@@ -196,21 +196,21 @@ retrofit2.Call&lt;<a href="../../model/common/avatar/Outfit.html" title="class i
 <li class="blockList">
 <h4>delete</h4>
 <pre class="methodSignature">@POST("v1/outfits/{userOutfitId}/delete")
-retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class in rbxapi.javablox.model.common.serial">Boolean</a>&gt;&nbsp;delete&#8203;(@Path("userOutfitId")
+retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class in rbxapi.javablox.data.common.serial">Boolean</a>&gt;&nbsp;delete&#8203;(@Path("userOutfitId")
                                long&nbsp;userOutfitId)</pre>
 </li>
 </ul>
-<a id="update(long,rbxapi.javablox.model.avatar.OutfitUpdateModel)">
+<a id="update(long,rbxapi.javablox.data.avatar.OutfitUpdateModel)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>update</h4>
 <pre class="methodSignature">@POST("v1/outfits/{userOutfitId}/update")
-retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class in rbxapi.javablox.model.common.serial">Boolean</a>&gt;&nbsp;update&#8203;(@Path("userOutfitId")
+retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class in rbxapi.javablox.data.common.serial">Boolean</a>&gt;&nbsp;update&#8203;(@Path("userOutfitId")
                                long&nbsp;userOutfitId,
                                @Body
-                               <a href="../../model/avatar/OutfitUpdateModel.html" title="class in rbxapi.javablox.model.avatar">OutfitUpdateModel</a>&nbsp;outfitUpdateModel)</pre>
+                               <a href="../../model/avatar/OutfitUpdateModel.html" title="class in rbxapi.javablox.data.avatar">OutfitUpdateModel</a>&nbsp;outfitUpdateModel)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>outfitUpdateModel</code> - model</dd>
@@ -229,7 +229,7 @@ retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class 
 <li class="blockList">
 <h4>wear</h4>
 <pre class="methodSignature">@POST("v1/outfits/{userOutfitId}/wear")
-retrofit2.Call&lt;<a href="../../model/avatar/WearAssetsResponse.html" title="class in rbxapi.javablox.model.avatar">WearAssetsResponse</a>&gt;&nbsp;wear&#8203;(@Path("userOutfitId")
+retrofit2.Call&lt;<a href="../../model/avatar/WearAssetsResponse.html" title="class in rbxapi.javablox.data.avatar">WearAssetsResponse</a>&gt;&nbsp;wear&#8203;(@Path("userOutfitId")
                                         long&nbsp;userOutfitId)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -241,15 +241,15 @@ retrofit2.Call&lt;<a href="../../model/avatar/WearAssetsResponse.html" title="cl
 </dl>
 </li>
 </ul>
-<a id="create(rbxapi.javablox.model.avatar.OutfitUpdateModel)">
+<a id="create(rbxapi.javablox.data.avatar.OutfitUpdateModel)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>create</h4>
 <pre class="methodSignature">@POST("v1/outfits/create")
-retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class in rbxapi.javablox.model.common.serial">Boolean</a>&gt;&nbsp;create&#8203;(@Body
-                               <a href="../../model/avatar/OutfitUpdateModel.html" title="class in rbxapi.javablox.model.avatar">OutfitUpdateModel</a>&nbsp;outfitUpdateModel)</pre>
+retrofit2.Call&lt;<a href="../../model/common/serial/Boolean.html" title="class in rbxapi.javablox.data.common.serial">Boolean</a>&gt;&nbsp;create&#8203;(@Body
+                               <a href="../../model/avatar/OutfitUpdateModel.html" title="class in rbxapi.javablox.data.avatar">OutfitUpdateModel</a>&nbsp;outfitUpdateModel)</pre>
 </li>
 </ul>
 </li>

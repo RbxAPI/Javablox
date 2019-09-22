@@ -133,27 +133,27 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.model">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.model.common.bundle">Bundle</a>&gt;&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAssetBundles(long,rbxapi.javablox.model.common.SortOrder,int,java.lang.String)">getAssetBundles</a></span>&#8203;(long&nbsp;assetId,
-               <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.model.common">SortOrder</a>&nbsp;sortOrder,
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.data">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.data.common.bundle">Bundle</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAssetBundles(long,rbxapi.javablox.data.common.SortOrder,int,java.lang.String)">getAssetBundles</a></span>&#8203;(long&nbsp;assetId,
+               <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.data.common">SortOrder</a>&nbsp;sortOrder,
                int&nbsp;limit,
                java.lang.String&nbsp;cursor)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.model">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.model.common.bundle">Bundle</a>&gt;&gt;</code></td>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.data">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.data.common.bundle">Bundle</a>&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBundle(long)">getBundle</a></span>&#8203;(long&nbsp;bundleId)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.model">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.model.common.bundle">Bundle</a>&gt;[]&gt;</code></td>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.data">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.data.common.bundle">Bundle</a>&gt;[]&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBundles(long%5B%5D)">getBundles</a></span>&#8203;(long[]&nbsp;bundleId)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i3">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.model">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.model.common.bundle">Bundle</a>&gt;&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserBundles(long,rbxapi.javablox.model.common.SortOrder,int,java.lang.String)">getUserBundles</a></span>&#8203;(long&nbsp;userId,
-              <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.model.common">SortOrder</a>&nbsp;sortOrder,
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.data">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.data.common.bundle">Bundle</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserBundles(long,rbxapi.javablox.data.common.SortOrder,int,java.lang.String)">getUserBundles</a></span>&#8203;(long&nbsp;userId,
+              <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.data.common">SortOrder</a>&nbsp;sortOrder,
               int&nbsp;limit,
               java.lang.String&nbsp;cursor)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -183,17 +183,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="getAssetBundles(long,rbxapi.javablox.model.common.SortOrder,int,java.lang.String)">
+<a id="getAssetBundles(long,rbxapi.javablox.data.common.SortOrder,int,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getAssetBundles</h4>
 <pre class="methodSignature">@GET("v1/assets/{assetId}/bundles")
-retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.model">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.model.common.bundle">Bundle</a>&gt;&gt;&nbsp;getAssetBundles&#8203;(@Path("assetId")
+retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.data">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.data.common.bundle">Bundle</a>&gt;&gt;&nbsp;getAssetBundles&#8203;(@Path("assetId")
                                                        long&nbsp;assetId,
                                                        @Query("sortOrder")
-                                                       <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.model.common">SortOrder</a>&nbsp;sortOrder,
+                                                       <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.data.common">SortOrder</a>&nbsp;sortOrder,
                                                        @Query("limit")
                                                        int&nbsp;limit,
                                                        @Query("cursor")
@@ -207,7 +207,7 @@ retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxa
 <li class="blockList">
 <h4>getBundle</h4>
 <pre class="methodSignature">@GET("v1/bundles/{bundleId}/details")
-retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.model">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.model.common.bundle">Bundle</a>&gt;&gt;&nbsp;getBundle&#8203;(@Path("bundleId")
+retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.data">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.data.common.bundle">Bundle</a>&gt;&gt;&nbsp;getBundle&#8203;(@Path("bundleId")
                                                  long&nbsp;bundleId)</pre>
 </li>
 </ul>
@@ -218,21 +218,21 @@ retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxa
 <li class="blockList">
 <h4>getBundles</h4>
 <pre class="methodSignature">@GET("v1/bundles/details")
-retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.model">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.model.common.bundle">Bundle</a>&gt;[]&gt;&nbsp;getBundles&#8203;(@Query("bundleIds")
+retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.data">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.data.common.bundle">Bundle</a>&gt;[]&gt;&nbsp;getBundles&#8203;(@Query("bundleIds")
                                                     long[]&nbsp;bundleId)</pre>
 </li>
 </ul>
-<a id="getUserBundles(long,rbxapi.javablox.model.common.SortOrder,int,java.lang.String)">
+<a id="getUserBundles(long,rbxapi.javablox.data.common.SortOrder,int,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getUserBundles</h4>
 <pre class="methodSignature">@GET("v1/users/{userId}/bundles")
-retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.model">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.model.common.bundle">Bundle</a>&gt;&gt;&nbsp;getUserBundles&#8203;(@Path("userId")
+retrofit2.Call&lt;<a href="../../model/CursorResponse.html" title="class in rbxapi.javablox.data">CursorResponse</a>&lt;<a href="../../model/common/bundle/Bundle.html" title="class in rbxapi.javablox.data.common.bundle">Bundle</a>&gt;&gt;&nbsp;getUserBundles&#8203;(@Path("userId")
                                                       long&nbsp;userId,
                                                       @Query("sortOrder")
-                                                      <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.model.common">SortOrder</a>&nbsp;sortOrder,
+                                                      <a href="../../model/common/SortOrder.html" title="enum in rbxapi.javablox.data.common">SortOrder</a>&nbsp;sortOrder,
                                                       @Query("limit")
                                                       int&nbsp;limit,
                                                       @Query("cursor")

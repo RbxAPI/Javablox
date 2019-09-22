@@ -1,8 +1,7 @@
 package rbxapi.javablox.api.user.account;
 
-import rbxapi.javablox.api.user.account.info.Birthdate;
 import rbxapi.javablox.client.JavabloxResponseCallback;
-import rbxapi.javablox.model.Gender;
+import rbxapi.javablox.data.Gender;
 
 public interface AccountInfo {
 
@@ -17,4 +16,22 @@ public interface AccountInfo {
     void getGender(JavabloxResponseCallback<Gender> callback);
 
     void setGender(Gender gender, JavabloxResponseCallback<Void> callback);
+
+    void getXboxConsecutiveLoginDays(JavabloxResponseCallback<Integer> callback);
+
+    void fetchMetadata(JavabloxResponseCallback callback);
+
+    boolean isDescriptionEnabled();
+
+    boolean isBirthdateEnabled();
+
+    boolean isGenderEnabled();
+
+    boolean isPromotionChannelEnabled();
+
+    boolean isAllowedNotificationsEndpointDisabled();
+
+    boolean isAccountSettingsPolicyEnabled();
+
+    boolean isPhoneNumberEnabled();
 }

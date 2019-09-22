@@ -38,10 +38,8 @@ allprojects {
         }
     }
 
-    tasks.withType(PublishToMavenRepository) {
-        onlyIf {
-            JavaVersion.current().java11
-        }
+    tasks.withType(GenerateMavenPom).all {
+        onlyIf {JavaVersion.current().java11}
     }
 }
 
@@ -138,7 +136,9 @@ publishing {
     }
 }
 
-buildScan {
-    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
-    termsOfServiceAgree = 'yes'
+if (hasProperty('buildScan')) {
+    buildScan {
+        termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+        termsOfServiceAgree = 'yes'
+    }
 }

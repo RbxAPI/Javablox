@@ -133,20 +133,20 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/accountsettings/ThemeType.html" title="enum in rbxapi.javablox.model.accountsettings">ThemeType</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getConsumerThemeType(rbxapi.javablox.model.accountsettings.ConsumerType,long)">getConsumerThemeType</a></span>&#8203;(<a href="../../model/accountsettings/ConsumerType.html" title="enum in rbxapi.javablox.model.accountsettings">ConsumerType</a>&nbsp;consumerType,
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/accountsettings/ThemeType.html" title="enum in rbxapi.javablox.data.accountsettings">ThemeType</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getConsumerThemeType(rbxapi.javablox.data.accountsettings.ConsumerType,long)">getConsumerThemeType</a></span>&#8203;(<a href="../../model/accountsettings/ConsumerType.html" title="enum in rbxapi.javablox.data.accountsettings">ConsumerType</a>&nbsp;consumerType,
                     long&nbsp;consumerId)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/accountsettings/ThemeTypes.html" title="class in rbxapi.javablox.model.accountsettings">ThemeTypes</a>&gt;</code></td>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/accountsettings/ThemeTypes.html" title="class in rbxapi.javablox.data.accountsettings">ThemeTypes</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEnabledThemeTypes()">getEnabledThemeTypes</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>retrofit2.Call</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setConsumerThemeType(rbxapi.javablox.model.accountsettings.ThemeType,rbxapi.javablox.model.accountsettings.ConsumerType,long)">setConsumerThemeType</a></span>&#8203;(<a href="../../model/accountsettings/ThemeType.html" title="enum in rbxapi.javablox.model.accountsettings">ThemeType</a>&nbsp;request,
-                    <a href="../../model/accountsettings/ConsumerType.html" title="enum in rbxapi.javablox.model.accountsettings">ConsumerType</a>&nbsp;consumerType,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setConsumerThemeType(rbxapi.javablox.data.accountsettings.ThemeType,rbxapi.javablox.data.accountsettings.ConsumerType,long)">setConsumerThemeType</a></span>&#8203;(<a href="../../model/accountsettings/ThemeType.html" title="enum in rbxapi.javablox.data.accountsettings">ThemeType</a>&nbsp;request,
+                    <a href="../../model/accountsettings/ConsumerType.html" title="enum in rbxapi.javablox.data.accountsettings">ConsumerType</a>&nbsp;consumerType,
                     long&nbsp;consumerId)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -177,23 +177,23 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>getEnabledThemeTypes</h4>
 <pre class="methodSignature">@GET("v1/themes/type")
-retrofit2.Call&lt;<a href="../../model/accountsettings/ThemeTypes.html" title="class in rbxapi.javablox.model.accountsettings">ThemeTypes</a>&gt;&nbsp;getEnabledThemeTypes()</pre>
+retrofit2.Call&lt;<a href="../../model/accountsettings/ThemeTypes.html" title="class in rbxapi.javablox.data.accountsettings">ThemeTypes</a>&gt;&nbsp;getEnabledThemeTypes()</pre>
 </li>
 </ul>
-<a id="getConsumerThemeType(rbxapi.javablox.model.accountsettings.ConsumerType,long)">
+<a id="getConsumerThemeType(rbxapi.javablox.data.accountsettings.ConsumerType,long)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getConsumerThemeType</h4>
 <pre class="methodSignature">@GET("v1/themes/{consumerType}/{consumerId}")
-retrofit2.Call&lt;<a href="../../model/accountsettings/ThemeType.html" title="enum in rbxapi.javablox.model.accountsettings">ThemeType</a>&gt;&nbsp;getConsumerThemeType&#8203;(@Path("consumerType")
-                                               <a href="../../model/accountsettings/ConsumerType.html" title="enum in rbxapi.javablox.model.accountsettings">ConsumerType</a>&nbsp;consumerType,
+retrofit2.Call&lt;<a href="../../model/accountsettings/ThemeType.html" title="enum in rbxapi.javablox.data.accountsettings">ThemeType</a>&gt;&nbsp;getConsumerThemeType&#8203;(@Path("consumerType")
+                                               <a href="../../model/accountsettings/ConsumerType.html" title="enum in rbxapi.javablox.data.accountsettings">ConsumerType</a>&nbsp;consumerType,
                                                @Path("consumerId")
                                                long&nbsp;consumerId)</pre>
 </li>
 </ul>
-<a id="setConsumerThemeType(rbxapi.javablox.model.accountsettings.ThemeType,rbxapi.javablox.model.accountsettings.ConsumerType,long)">
+<a id="setConsumerThemeType(rbxapi.javablox.data.accountsettings.ThemeType,rbxapi.javablox.data.accountsettings.ConsumerType,long)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -201,9 +201,9 @@ retrofit2.Call&lt;<a href="../../model/accountsettings/ThemeType.html" title="en
 <h4>setConsumerThemeType</h4>
 <pre class="methodSignature">@PATCH("v1/themes/{consumerType}/{consumerId}")
 retrofit2.Call&nbsp;setConsumerThemeType&#8203;(@Body
-                                    <a href="../../model/accountsettings/ThemeType.html" title="enum in rbxapi.javablox.model.accountsettings">ThemeType</a>&nbsp;request,
+                                    <a href="../../model/accountsettings/ThemeType.html" title="enum in rbxapi.javablox.data.accountsettings">ThemeType</a>&nbsp;request,
                                     @Path("consumerType")
-                                    <a href="../../model/accountsettings/ConsumerType.html" title="enum in rbxapi.javablox.model.accountsettings">ConsumerType</a>&nbsp;consumerType,
+                                    <a href="../../model/accountsettings/ConsumerType.html" title="enum in rbxapi.javablox.data.accountsettings">ConsumerType</a>&nbsp;consumerType,
                                     @Path("consumerId")
                                     long&nbsp;consumerId)</pre>
 </li>

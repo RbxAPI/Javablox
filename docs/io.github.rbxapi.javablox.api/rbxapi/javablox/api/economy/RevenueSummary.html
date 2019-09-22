@@ -133,15 +133,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/economy/Revenue.html" title="class in rbxapi.javablox.model.economy">Revenue</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGroupRevenue(long,rbxapi.javablox.model.economy.TimeFrame)">getGroupRevenue</a></span>&#8203;(long&nbsp;groupId,
-               <a href="../../model/economy/TimeFrame.html" title="enum in rbxapi.javablox.model.economy">TimeFrame</a>&nbsp;timeFrame)</code></th>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/economy/Revenue.html" title="class in rbxapi.javablox.data.economy">Revenue</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGroupRevenue(long,rbxapi.javablox.data.economy.TimeFrame)">getGroupRevenue</a></span>&#8203;(long&nbsp;groupId,
+               <a href="../../model/economy/TimeFrame.html" title="enum in rbxapi.javablox.data.economy">TimeFrame</a>&nbsp;timeFrame)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/economy/Revenue.html" title="class in rbxapi.javablox.model.economy">Revenue</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserRevenue(long,rbxapi.javablox.model.economy.TimeFrame)">getUserRevenue</a></span>&#8203;(long&nbsp;userId,
-              <a href="../../model/economy/TimeFrame.html" title="enum in rbxapi.javablox.model.economy">TimeFrame</a>&nbsp;timeFrame)</code></th>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/economy/Revenue.html" title="class in rbxapi.javablox.data.economy">Revenue</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserRevenue(long,rbxapi.javablox.data.economy.TimeFrame)">getUserRevenue</a></span>&#8203;(long&nbsp;userId,
+              <a href="../../model/economy/TimeFrame.html" title="enum in rbxapi.javablox.data.economy">TimeFrame</a>&nbsp;timeFrame)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -164,30 +164,30 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="getGroupRevenue(long,rbxapi.javablox.model.economy.TimeFrame)">
+<a id="getGroupRevenue(long,rbxapi.javablox.data.economy.TimeFrame)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getGroupRevenue</h4>
 <pre class="methodSignature">@GET("/v1/groups/{groupId}/revenue/summary/{timeFrame}")
-retrofit2.Call&lt;<a href="../../model/economy/Revenue.html" title="class in rbxapi.javablox.model.economy">Revenue</a>&gt;&nbsp;getGroupRevenue&#8203;(@Path("groupID")
+retrofit2.Call&lt;<a href="../../model/economy/Revenue.html" title="class in rbxapi.javablox.data.economy">Revenue</a>&gt;&nbsp;getGroupRevenue&#8203;(@Path("groupID")
                                         long&nbsp;groupId,
                                         @Path("timeFrame")
-                                        <a href="../../model/economy/TimeFrame.html" title="enum in rbxapi.javablox.model.economy">TimeFrame</a>&nbsp;timeFrame)</pre>
+                                        <a href="../../model/economy/TimeFrame.html" title="enum in rbxapi.javablox.data.economy">TimeFrame</a>&nbsp;timeFrame)</pre>
 </li>
 </ul>
-<a id="getUserRevenue(long,rbxapi.javablox.model.economy.TimeFrame)">
+<a id="getUserRevenue(long,rbxapi.javablox.data.economy.TimeFrame)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getUserRevenue</h4>
 <pre class="methodSignature">@GET("/v1/users/{userId}/revenue/summary/{timeFrame}")
-retrofit2.Call&lt;<a href="../../model/economy/Revenue.html" title="class in rbxapi.javablox.model.economy">Revenue</a>&gt;&nbsp;getUserRevenue&#8203;(@Path("userID")
+retrofit2.Call&lt;<a href="../../model/economy/Revenue.html" title="class in rbxapi.javablox.data.economy">Revenue</a>&gt;&nbsp;getUserRevenue&#8203;(@Path("userID")
                                        long&nbsp;userId,
                                        @Path("timeFrame")
-                                       <a href="../../model/economy/TimeFrame.html" title="enum in rbxapi.javablox.model.economy">TimeFrame</a>&nbsp;timeFrame)</pre>
+                                       <a href="../../model/economy/TimeFrame.html" title="enum in rbxapi.javablox.data.economy">TimeFrame</a>&nbsp;timeFrame)</pre>
 </li>
 </ul>
 </li>

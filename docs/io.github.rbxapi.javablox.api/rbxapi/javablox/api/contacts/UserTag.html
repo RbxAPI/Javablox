@@ -133,18 +133,18 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor" id="i0">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/contacts/UserTag.html" title="class in rbxapi.javablox.model.contacts">UserTag</a>[]&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserTags(rbxapi.javablox.model.contacts.UserTagsRequest)">getUserTags</a></span>&#8203;(<a href="../../model/contacts/UserTagsRequest.html" title="class in rbxapi.javablox.model.contacts">UserTagsRequest</a>&nbsp;requestModel)</code></th>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/contacts/UserTag.html" title="class in rbxapi.javablox.data.contacts">UserTag</a>[]&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserTags(rbxapi.javablox.data.contacts.UserTagsRequest)">getUserTags</a></span>&#8203;(<a href="../../model/contacts/UserTagsRequest.html" title="class in rbxapi.javablox.data.contacts">UserTagsRequest</a>&nbsp;requestModel)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/contacts/UserTagStatus.html" title="class in rbxapi.javablox.model.contacts">UserTagStatus</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPendingTag(rbxapi.javablox.model.contacts.UserTag)">setPendingTag</a></span>&#8203;(<a href="../../model/contacts/UserTag.html" title="class in rbxapi.javablox.model.contacts">UserTag</a>&nbsp;requestModel)</code></th>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/contacts/UserTagStatus.html" title="class in rbxapi.javablox.data.contacts">UserTagStatus</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPendingTag(rbxapi.javablox.data.contacts.UserTag)">setPendingTag</a></span>&#8203;(<a href="../../model/contacts/UserTag.html" title="class in rbxapi.javablox.data.contacts">UserTag</a>&nbsp;requestModel)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor" id="i2">
-<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/contacts/UserTagStatus.html" title="class in rbxapi.javablox.model.contacts">UserTagStatus</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTag(rbxapi.javablox.model.contacts.UserTag)">setTag</a></span>&#8203;(<a href="../../model/contacts/UserTag.html" title="class in rbxapi.javablox.model.contacts">UserTag</a>&nbsp;requestModel)</code></th>
+<td class="colFirst"><code>retrofit2.Call&lt;<a href="../../model/contacts/UserTagStatus.html" title="class in rbxapi.javablox.data.contacts">UserTagStatus</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTag(rbxapi.javablox.data.contacts.UserTag)">setTag</a></span>&#8203;(<a href="../../model/contacts/UserTag.html" title="class in rbxapi.javablox.data.contacts">UserTag</a>&nbsp;requestModel)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -167,37 +167,37 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="getUserTags(rbxapi.javablox.model.contacts.UserTagsRequest)">
+<a id="getUserTags(rbxapi.javablox.data.contacts.UserTagsRequest)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getUserTags</h4>
 <pre class="methodSignature">@POST("/v1/user/get-tags")
-retrofit2.Call&lt;<a href="../../model/contacts/UserTag.html" title="class in rbxapi.javablox.model.contacts">UserTag</a>[]&gt;&nbsp;getUserTags&#8203;(@Body
-                                      <a href="../../model/contacts/UserTagsRequest.html" title="class in rbxapi.javablox.model.contacts">UserTagsRequest</a>&nbsp;requestModel)</pre>
+retrofit2.Call&lt;<a href="../../model/contacts/UserTag.html" title="class in rbxapi.javablox.data.contacts">UserTag</a>[]&gt;&nbsp;getUserTags&#8203;(@Body
+                                      <a href="../../model/contacts/UserTagsRequest.html" title="class in rbxapi.javablox.data.contacts">UserTagsRequest</a>&nbsp;requestModel)</pre>
 </li>
 </ul>
-<a id="setPendingTag(rbxapi.javablox.model.contacts.UserTag)">
+<a id="setPendingTag(rbxapi.javablox.data.contacts.UserTag)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setPendingTag</h4>
 <pre class="methodSignature">@POST("/v1/user/set-pending-tag")
-retrofit2.Call&lt;<a href="../../model/contacts/UserTagStatus.html" title="class in rbxapi.javablox.model.contacts">UserTagStatus</a>&gt;&nbsp;setPendingTag&#8203;(@Body
-                                            <a href="../../model/contacts/UserTag.html" title="class in rbxapi.javablox.model.contacts">UserTag</a>&nbsp;requestModel)</pre>
+retrofit2.Call&lt;<a href="../../model/contacts/UserTagStatus.html" title="class in rbxapi.javablox.data.contacts">UserTagStatus</a>&gt;&nbsp;setPendingTag&#8203;(@Body
+                                            <a href="../../model/contacts/UserTag.html" title="class in rbxapi.javablox.data.contacts">UserTag</a>&nbsp;requestModel)</pre>
 </li>
 </ul>
-<a id="setTag(rbxapi.javablox.model.contacts.UserTag)">
+<a id="setTag(rbxapi.javablox.data.contacts.UserTag)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setTag</h4>
 <pre class="methodSignature">@POST("/v1/user/tag")
-retrofit2.Call&lt;<a href="../../model/contacts/UserTagStatus.html" title="class in rbxapi.javablox.model.contacts">UserTagStatus</a>&gt;&nbsp;setTag&#8203;(@Body
-                                     <a href="../../model/contacts/UserTag.html" title="class in rbxapi.javablox.model.contacts">UserTag</a>&nbsp;requestModel)</pre>
+retrofit2.Call&lt;<a href="../../model/contacts/UserTagStatus.html" title="class in rbxapi.javablox.data.contacts">UserTagStatus</a>&gt;&nbsp;setTag&#8203;(@Body
+                                     <a href="../../model/contacts/UserTag.html" title="class in rbxapi.javablox.data.contacts">UserTag</a>&nbsp;requestModel)</pre>
 </li>
 </ul>
 </li>
